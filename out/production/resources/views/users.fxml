@@ -15,11 +15,11 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <TableView layoutX="95.0" layoutY="136.0" onMouseClicked="#tableClicked" prefHeight="466.0" prefWidth="870.0">
+        <TableView fx:id="usersTable" layoutX="95.0" layoutY="136.0" onMouseClicked="#tableClicked" prefHeight="466.0" prefWidth="870.0">
             <columns>
-                <TableColumn prefWidth="254.0" text="ФИО" />
-            <TableColumn prefWidth="307.0" text="Логин" />
-            <TableColumn prefWidth="307.0" text="Статус" />
+                <TableColumn fx:id="columnName" prefWidth="254.0" text="ФИО" />
+                <TableColumn fx:id="columnSurame" prefWidth="307.0" text="Логин" />
+                <TableColumn fx:id="columnStatus" prefWidth="307.0" text="Статус" />
             </columns>
         </TableView>
         <Button layoutX="795.0" layoutY="653.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Сохранить изменения" />

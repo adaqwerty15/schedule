@@ -4,19 +4,37 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
-import retrofit2.Call;
+import retrofit2.Response;
 import ru.isu.tashkenova.appSch.RetrofitService;
 import ru.isu.tashkenova.appSch.User;
+import ru.isu.tashkenova.appSch.UserView;
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.List;
 
 public class UsersController implements ListEditor{
 
     @FXML
-    private TableView usersTable;
+    private TableView<UserView> usersTable = new TableView<>();
+
+    @FXML
+    private TableColumn<UserView, String> columnName;
+
+    @FXML
+    private TableColumn<UserView, String> columnSurname;
+
+    @FXML
+    private TableColumn<UserView, String> columnfatherrname;
+
+    @FXML
+    private TableColumn<UserView, Integer> columnRoleId;
+
+
+    ObservableList content;
+
 
     @Override
     public void tableClicked(MouseEvent mouseEvent) {
@@ -39,15 +57,17 @@ public class UsersController implements ListEditor{
     }
 
     @Override
-    public void initialize() {
-        ObservableList content;
+    public void initialize() throws IOException {
 
-        Call<List<User>> users = RetrofitService.RetrofitBuild().getUsers();
+        columnName.setCellValueFactory(celldata -> celldata.getValue().nameProperty());
+        //columnSurname.setCellValueFactory(celldata -> celldata.getValue().lastnameProperty());
+
+        Response<List<User>> users = RetrofitService.RetrofitBuild().getUsers().execute();
         content = FXCollections.observableArrayList(
-                users.body();
+                users.body()
         );
-
-        //usersTable.setItems(users);
+        System.out.print(content.toString());
+        usersTable.setItems(content);
     }
 
     public void resetPasswordClicked(ActionEvent actionEvent) {

@@ -94,4 +94,8 @@ public class User {
         this.errorCode = 0;
     }
 
+    @Override
+    public String toString() {
+        return this.name + " "+ this.surname +" "+ this.fathername + " " + this.login + " " + this.roleId;
+    }
 }
