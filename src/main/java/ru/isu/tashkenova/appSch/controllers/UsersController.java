@@ -7,8 +7,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import retrofit2.Response;
 import ru.isu.tashkenova.appSch.RetrofitService;
@@ -22,7 +25,7 @@ import java.util.List;
 public class UsersController implements ListEditor{
 
     private ObservableList<UserView> data = FXCollections.observableArrayList();
-    UserService service;
+    private UserService service;
 
 
     @FXML
@@ -46,7 +49,7 @@ public class UsersController implements ListEditor{
 
 
 
-    ObservableList content;
+    private ObservableList content;
 
 
     @Override
@@ -68,11 +71,32 @@ public class UsersController implements ListEditor{
     @Override
     public void initialize() throws IOException {
 
+        usersTable.setEditable(true);
+
+        ContextMenu cm = new ContextMenu();
+        MenuItem mi1 = new MenuItem("Menu 1");
+        cm.getItems().add(mi1);
+        MenuItem mi2 = new MenuItem("Menu 2");
+        cm.getItems().add(mi2);
+
+        usersTable.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent t) {
+                if(t.getButton() == MouseButton.SECONDARY) {
+                    cm.show(usersTable, t.getScreenX(), t.getScreenY());
+                }
+            }
+        });
+
+
+
         columnName.setCellValueFactory(celldata -> celldata.getValue().nameProperty());
         columnSurname.setCellValueFactory(celldata -> celldata.getValue().lastnameProperty());
         columnRoleId.setCellValueFactory(celldata -> celldata.getValue().roleIdProperty().asObject());
         columnfatherrname.setCellValueFactory(celldata -> celldata.getValue().fathernameProperty());
         columnlogin.setCellValueFactory(celldata -> celldata.getValue().loginProperty());
+
+        usersTable.getSelectionModel().setCellSelectionEnabled(true);
 
         Gson gson = new GsonBuilder()
                 .setDateFormat("MMM dd, yyyy")
@@ -92,6 +116,9 @@ public class UsersController implements ListEditor{
                     user.getFathername(), user.getLogin(), user.getRoleId(), user.getId()));
         }
         usersTable.setItems(data);
+
+
+
 
         usersTable.setOnMouseClicked(new ListViewHandler(){
             @Override
@@ -121,4 +148,5 @@ public class UsersController implements ListEditor{
 
     public void resetPasswordClicked(ActionEvent actionEvent) {
     }
+
 }

@@ -68,6 +68,30 @@ public class UserView {
         return roleId.get();
     }
 
+    public void setName(String name) {
+        this.name.set(name);
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname.set(lastname);
+    }
+
+    public void setFathername(String fathername) {
+        this.fathername.set(fathername);
+    }
+
+    public void setLogin(String login) {
+        this.login.set(login);
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId.set(roleId);
+    }
+
+    public void setId(int id) {
+        this.id.set(id);
+    }
+
     public IntegerProperty roleIdProperty() {
         return roleId;
     }
