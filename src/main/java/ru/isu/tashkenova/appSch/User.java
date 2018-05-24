@@ -1,6 +1,7 @@
 package ru.isu.tashkenova.appSch;
 
 public class User {
+
     public int id;
     public int roleId;
     public String name;
@@ -20,6 +21,20 @@ public class User {
         this.login = login;
         this.password = password;
         this.errorCode = errorCode;
+    }
+
+    public User(int roleId, String name, String surname, String fathername, String login) {
+        this.roleId = roleId;
+        this.name = name;
+        this.surname = surname;
+        this.fathername = fathername;
+        this.login = login;
+    }
+
+    public User(int roleId, String name, String surname) {
+        this.roleId = roleId;
+        this.name = name;
+        this.surname = surname;
     }
 
     public void setId(int id) {
@@ -96,6 +111,6 @@ public class User {
 
     @Override
     public String toString() {
-        return this.name + " "+ this.surname +" "+ this.fathername + " " + this.login + " " + this.roleId;
+        return this.id + "" + this.name + " "+ this.surname +" "+ this.fathername + " " + this.login + " " + this.roleId;
     }
 }
