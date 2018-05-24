@@ -6,11 +6,14 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+
 public class RetrofitService  {
 
-//    static Proxy proxy = new Proxy(Proxy.Type.HTTP,  new InetSocketAddress(
-//            "proxy.isu.ru", 3128));
-    static OkHttpClient client = new OkHttpClient.Builder().build();
+    static private Proxy proxy = new Proxy(Proxy.Type.HTTP,  new InetSocketAddress(
+            "proxy.isu.ru", 3128));
+    static private OkHttpClient client = new OkHttpClient.Builder().proxy(proxy).build();
 
     public static UserService RetrofitBuild() {
         Gson gson = new GsonBuilder().setLenient().create();
