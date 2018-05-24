@@ -2,37 +2,48 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="371.0" prefWidth="456.0" style="-fx-background-color: #fFffff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.AddClassController">
+<AnchorPane prefHeight="439.0" prefWidth="456.0" style="-fx-background-color: #fFffff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.AddUserController">
    <children>
       <Label layoutX="48.0" layoutY="23.0" text="Добавить пользователя">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="48.0" layoutY="81.0" text="Имя">
+      <Label fx:id="name" layoutX="48.0" layoutY="81.0" text="Имя">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="48.0" layoutY="126.0" text="Фамилия">
+      <Label fx:id="surname" layoutX="48.0" layoutY="126.0" text="Фамилия">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+      <Label fx:id="fathername" layoutX="49.0" layoutY="175.0" text="Отчество">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="roleId" layoutX="50.0" layoutY="224.0" text="Статус">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="login" layoutX="51.0" layoutY="277.0" text="Логин" />
+      <Label fx:id="password" layoutX="52.0" layoutY="328.0" text="Пароль" />
+      <TextField fx:id="tname" layoutX="189.0" layoutY="79.0" />
+      <TextField fx:id="tsurname" layoutX="189.0" layoutY="124.0" />
+      <TextField fx:id="tfathername" layoutX="189.0" layoutY="173.0" />
+      <TextField fx:id="troleId" layoutX="189.0" layoutY="224.0" />
+      <TextField fx:id="tlogin" layoutX="189.0" layoutY="272.0" />
 
-      <TextField layoutX="189.0" layoutY="79.0" />
-      <TextField layoutX="189.0" layoutY="124.0" />
-     
-      <Button fx:id="exitButton" layoutX="191.0" layoutY="320.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Готово" />
-      <Label layoutX="49.0" layoutY="175.0" text="Отчество">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TextField layoutX="189.0" layoutY="173.0" />
+
+      <Button fx:id="exitButton" layoutX="189.0" layoutY="383.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Готово" />
+      <PasswordField fx:id="tpassword" layoutX="189.0" layoutY="323.0" />
    </children>
 </AnchorPane>

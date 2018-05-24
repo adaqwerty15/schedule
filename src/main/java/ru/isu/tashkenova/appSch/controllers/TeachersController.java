@@ -26,9 +26,10 @@ public class TeachersController implements ListEditor{
     }
 
     @Override
-    public void selectButtonClicked(ActionEvent actionEvent) {
+    public void addButtonClicked(ActionEvent actionEvent) {
 
     }
+
 
     @Override
     public void initialize() {

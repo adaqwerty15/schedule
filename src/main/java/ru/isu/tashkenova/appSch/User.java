@@ -2,14 +2,14 @@ package ru.isu.tashkenova.appSch;
 
 public class User {
 
-    public int id;
-    public int roleId;
-    public String name;
-    public String surname;
-    public String fathername;
-    public String login;
-    public String password;
-    public int errorCode;
+    private int id;
+    private int roleId;
+    private String name;
+    private String surname;
+    private String fathername;
+    private String login;
+    private String password;
+    private int errorCode;
 
     public User(int id, int roleId, String name, String surname, String fathername, String login,
                 String password, int errorCode) {

@@ -2,14 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9207b2dd-b509-4aca-abd6-a504f3949fdd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/UserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/UserView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/CabinetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/CabinetsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/ClassEditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/ClassEditorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/ListEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/ListEditor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SubjectsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SubjectsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/TeachersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/TeachersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController$ListViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController$ListViewHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/views/add_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/views/add_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/views/cabinets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/views/cabinets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/views/classEditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/views/classEditor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/views/subjects.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/views/subjects.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/views/teachers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/views/teachers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/views/users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/views/users.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CabinetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CabinetsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ClassEditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ClassEditorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ListEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ListEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SubjectsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SubjectsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/TeachersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/TeachersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/add_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/add_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/cabinets.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/cabinets.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/classEditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/classEditor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/subjects.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/subjects.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/teachers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/teachers.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/users.fxml" afterDir="false" />
     </list>
     <ignored path="appSch.iws" />
@@ -76,24 +98,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
-              <folding>
-                <element signature="e#1881#1882#0" expanded="true" />
-                <element signature="e#1915#1916#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -101,39 +110,35 @@
       <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+            <state relative-caret-position="1548">
+              <caret line="118" column="28" lean-forward="true" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2782#3052#0" expanded="true" />
-                <element signature="e#3051#3052#0" expanded="true" />
+                <element signature="e#2881#3101#0" expanded="true" />
+                <element signature="e#3100#3101#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/add.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="add_user.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_user.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/views/add_user.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="455">
+              <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file leaf-file-name="users.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/users.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="AddUserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="27" column="83" lean-forward="true" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
+            <state relative-caret-position="-94">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,30 +146,10 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1019#1020#0" expanded="true" />
-                <element signature="e#1050#1051#0" expanded="true" />
-                <element signature="e#1099#1100#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
-                <element signature="e#1239#1240#0" expanded="true" />
-                <element signature="e#1278#1279#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -502,12 +487,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/StudentPanelController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/studentdashboard.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/views/subjects.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ListEditor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/teachers.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ClassEditorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CabinetsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SubjectsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/TeachersController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/change.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ViewController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/teacherdashboard.fxml" />
@@ -521,18 +501,24 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/Retrofit.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/Retrofit2.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/RetrofitService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/users.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/users.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ListEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CabinetsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/TeachersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SubjectsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ClassEditorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/add_user.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddUserController.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
-    <option name="width" value="979" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -541,7 +527,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -604,6 +589,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -918,18 +904,18 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295583" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3259053" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32478634" />
       <window_info id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25213677" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24074075" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.055033557" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.0738255" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.13355705" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -947,31 +933,31 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.13355705" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25213677" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.1738255" />
-      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25213677" />
       <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.19798657" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3295583" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Designer" order="6" />
+      <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.399361" />
       <window_info id="Palette&#9;" order="1" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="3" weight="0.1965812" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3259053" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32478634" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info id="Favorites" order="4" side_tool="true" />
     </layout-to-restore>
@@ -997,24 +983,38 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+        <state relative-caret-position="986">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2782#3052#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AdminPanelController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="357">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2881#3101#0" expanded="true" />
+            <element signature="e#3100#3101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1029,10 +1029,6 @@
             <element signature="e#1050#1051#0" expanded="true" />
             <element signature="e#1099#1100#0" expanded="true" />
             <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1239#1240#0" expanded="true" />
-            <element signature="e#1278#1279#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1048,10 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1666">
           <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
-          <folding>
-            <element signature="e#1881#1882#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,8 +1053,8 @@
           <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2782#3052#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
+            <element signature="e#2881#3101#0" expanded="true" />
+            <element signature="e#3100#3101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1100,10 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
           <caret line="92" column="3" selection-start-line="92" selection-start-column="3" selection-end-line="94" selection-end-column="5" />
-          <folding>
-            <element signature="e#1881#1882#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1142,8 +1130,8 @@
           <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2782#3052#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
+            <element signature="e#2881#3101#0" expanded="true" />
+            <element signature="e#3100#3101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1171,55 +1159,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/control/Labeled.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/javafx/scene/control/Label.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/tudentPanelController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ClassEditorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ZavuchPanelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="31" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CabinetsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ListEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/RingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SubjectsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/TeachersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/TeacherPanelController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1255,71 +1194,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddClassController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/Retrofit.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AdminPanelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
-          <folding>
-            <element signature="e#1881#1882#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1239#1240#0" expanded="true" />
-            <element signature="e#1278#1279#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,45 +1214,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ListEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/RingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/TeachersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CabinetsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SubjectsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ClassEditorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddClassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AdminPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/ZavuchPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1099#1100#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2782#3052#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/add.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/users.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="83" lean-forward="true" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/add_user.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="455">
+          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1548">
+          <caret line="118" column="28" lean-forward="true" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2881#3101#0" expanded="true" />
+            <element signature="e#3100#3101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

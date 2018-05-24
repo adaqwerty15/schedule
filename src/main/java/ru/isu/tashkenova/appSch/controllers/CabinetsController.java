@@ -22,9 +22,11 @@ public class CabinetsController implements ListEditor{
     public void deleteButtonClicked(ActionEvent actionEvent) {
     }
 
-    @FXML
-    public void selectButtonClicked(ActionEvent actionEvent) {
+    @Override
+    public void addButtonClicked(ActionEvent actionEvent) {
+
     }
+
 
     @Override
     public void initialize() {

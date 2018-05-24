@@ -14,4 +14,8 @@ public interface UserService {
 
     @DELETE("users/{id}")
     Call<User> deleteUser(@Path("id") Integer id);
+
+    @PUT("users/{id}")
+    Call<User> putUser(@Path("id") Integer id);
+
 }

@@ -7,9 +7,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import retrofit2.Response;
 import ru.isu.tashkenova.appSch.RetrofitService;
 import ru.isu.tashkenova.appSch.User;
@@ -21,7 +26,7 @@ import java.util.List;
 
 public class UsersController implements ListEditor{
 
-    private ObservableList<UserView> data = FXCollections.observableArrayList();
+    public static ObservableList<UserView> data = FXCollections.observableArrayList();
     UserService service;
 
 
@@ -43,6 +48,8 @@ public class UsersController implements ListEditor{
     @FXML
     private TableColumn<UserView, String> columnlogin;
 
+    @FXML
+    private Label name;
 
 
 
@@ -59,11 +66,6 @@ public class UsersController implements ListEditor{
 
     }
 
-
-    @Override
-    public void selectButtonClicked(ActionEvent actionEvent) {
-
-    }
 
     @Override
     public void initialize() throws IOException {
@@ -110,6 +112,18 @@ public class UsersController implements ListEditor{
         data.remove(usersTable.getSelectionModel().getSelectedIndex());
         usersTable.refresh();
     }
+
+    @Override
+    public void addButtonClicked(ActionEvent actionEvent) throws Exception {
+        Stage stage_add = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        Parent root_add = fxmlLoader.load(getClass().getClassLoader().getResource("views/add_user.fxml"));
+        stage_add.setTitle("Add users");
+        stage_add.setScene(new Scene(root_add, 456, 439));
+        stage_add.show();
+        usersTable.refresh();
+    }
+
 
 
     class ListViewHandler implements EventHandler<MouseEvent> {

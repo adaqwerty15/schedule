@@ -9,6 +9,6 @@ public interface ListEditor {
     void tableClicked(MouseEvent mouseEvent);
     void saveButtonClicked(ActionEvent actionEvent);
     void deleteButtonClicked(ActionEvent actionEvent) throws IOException;
-    void selectButtonClicked(ActionEvent actionEvent);
+    void addButtonClicked(ActionEvent actionEvent) throws IOException, Exception;
     void initialize() throws IOException;
 }
