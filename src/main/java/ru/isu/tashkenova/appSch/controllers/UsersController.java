@@ -1,5 +1,7 @@
 package ru.isu.tashkenova.appSch.controllers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
@@ -38,7 +40,13 @@ public class UsersController implements ListEditor{
 
     @Override
     public void initialize() {
+        ObservableList content;
+
         Call<List<User>> users = RetrofitService.RetrofitBuild().getUsers();
+        content = FXCollections.observableArrayList(
+                users.body();
+        );
+
         //usersTable.setItems(users);
     }
 
