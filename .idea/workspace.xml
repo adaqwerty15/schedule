@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9207b2dd-b509-4aca-abd6-a504f3949fdd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/UserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/UserView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/AddUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/AddUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController$ListViewHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController$ListViewHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/views/users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/views/users.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/AddUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/users.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="9207b2dd-b509-4aca-abd6-a504f3949fdd" name="Default" comment="" />
     <ignored path="appSch.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -88,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
@@ -96,6 +83,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="кабинеты_предметы.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/кабинеты_предметы.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -888,6 +884,14 @@
       <option name="presentableId" value="Default" />
       <updated>1519832260868</updated>
     </task>
+    <task id="LOCAL-00001" summary="Change users ability">
+      <created>1527222132566</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527222132566</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -900,7 +904,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -911,8 +915,8 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42450142" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42450142" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Designer" order="3" />
@@ -974,6 +978,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change users ability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change users ability" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -984,24 +992,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/UserView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1330,6 +1320,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/кабинеты_предметы.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
