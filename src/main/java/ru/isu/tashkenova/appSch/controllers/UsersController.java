@@ -76,6 +76,60 @@ public class UsersController implements ListEditor{
         columnfatherrname.setCellValueFactory(celldata -> celldata.getValue().fathernameProperty());
         columnlogin.setCellValueFactory(celldata -> celldata.getValue().loginProperty());
 
+		        ContextMenu cm = new ContextMenu();
+        
+        MenuItem menuItemPut = new MenuItem("Put");
+        MenuItem menuItemDelete = new MenuItem("Delete");
+        MenuItem menuItemAdd = new MenuItem("Add");
+        
+        menuItemPut.setOnAction((ActionEvent event) -> {
+            try {
+                UserView user = usersTable.getSelectionModel().getSelectedItem();
+                Stage stage_add = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/change_user.fxml"));
+                Parent root_add;
+                root_add = fxmlLoader.load();              
+                ChangeUserController c = fxmlLoader.getController();
+                c.setUserv(user, usersTable.getSelectionModel().getSelectedIndex());
+                stage_add.setTitle("Change user");
+                stage_add.setScene(new Scene(root_add, 456, 439));
+                stage_add.show();     
+                usersTable.refresh();
+            } catch (IOException ex) {
+                Logger.getLogger(UsersController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+        
+        menuItemDelete.setOnAction((ActionEvent event) -> {
+            try {
+                UserView user = usersTable.getSelectionModel().getSelectedItem();
+                service.deleteUser(user.getId()).execute();
+                data.remove(usersTable.getSelectionModel().getSelectedIndex());
+                usersTable.refresh();
+            } catch (IOException ex) {
+                Logger.getLogger(UsersController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+        
+        menuItemAdd.setOnAction((ActionEvent event) -> {
+            try {
+                Stage stage_add = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                Parent root_add = fxmlLoader.load(getClass().getClassLoader().getResource("views/add_user.fxml"));
+                stage_add.setTitle("Добавить пользователя");
+                stage_add.setScene(new Scene(root_add, 456, 439));
+                stage_add.show();
+                usersTable.refresh();
+            } catch (IOException ex) {
+                Logger.getLogger(UsersController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+        
+        cm.getItems().add(menuItemPut);
+        cm.getItems().add(menuItemDelete);
+        cm.getItems().add(menuItemAdd);
+		
+		
         Gson gson = new GsonBuilder()
                 .setDateFormat("MMM dd, yyyy")
                 .create();
