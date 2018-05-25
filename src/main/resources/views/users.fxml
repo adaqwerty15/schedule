@@ -26,8 +26,8 @@
         </TableView>
         <Button layoutX="795.0" layoutY="653.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Сохранить изменения" />
       <Button layoutX="864.0" layoutY="60.0" mnemonicParsing="false" onAction="#deleteButtonClicked" text="Удалить" />
-      <Button layoutX="609.0" layoutY="60.0" mnemonicParsing="false" onAction="#resetPasswordClicked" text="Сбросить пароль" />
-      <Button layoutX="765.0" layoutY="60.0" mnemonicParsing="false" onAction="#addButtonClicked" text="Добавить" />
+      <Button layoutX="764.0" layoutY="60.0" mnemonicParsing="false" onAction="#addButtonClicked" text="Добавить" />
+      <Button layoutX="659.0" layoutY="60.0" mnemonicParsing="false" onAction="#changeButtonClicked" text="Изменить" />
 
     </children>
 </AnchorPane>

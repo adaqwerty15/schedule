@@ -91,7 +91,7 @@ public class UsersController implements ListEditor{
         for (User w: users.body()) {
             User user = gson.fromJson(gson.toJson(w), User.class);
             data.add(new UserView(user.getName(), user.getSurname(),
-                    user.getFathername(), user.getLogin(), user.getRoleId(), user.getId()));
+                    user.getFathername(), user.getLogin(), user.getRoleId(), user.getId(), user.getPassword()));
         }
         usersTable.setItems(data);
 
@@ -118,12 +118,26 @@ public class UsersController implements ListEditor{
         Stage stage_add = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent root_add = fxmlLoader.load(getClass().getClassLoader().getResource("views/add_user.fxml"));
-        stage_add.setTitle("Add users");
+        stage_add.setTitle("Добавить пользователя");
         stage_add.setScene(new Scene(root_add, 456, 439));
         stage_add.show();
         usersTable.refresh();
+
     }
 
+    public void changeButtonClicked(ActionEvent actionEvent) throws IOException {
+        UserView user = usersTable.getSelectionModel().getSelectedItem();
+        Stage stage_add = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/change_user.fxml"));
+        Parent root_add = fxmlLoader.load();
+        ChangeUserController c = fxmlLoader.getController();
+        c.setUserv(user, usersTable.getSelectionModel().getSelectedIndex());
+        stage_add.setTitle("Изменить пользователя");
+        stage_add.setScene(new Scene(root_add, 456, 439));
+        stage_add.show();
+
+        usersTable.refresh();
+    }
 
 
     class ListViewHandler implements EventHandler<MouseEvent> {
@@ -133,6 +147,7 @@ public class UsersController implements ListEditor{
         }
     }
 
-    public void resetPasswordClicked(ActionEvent actionEvent) {
-    }
+
 }
+
+

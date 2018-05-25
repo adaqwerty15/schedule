@@ -14,14 +14,25 @@ public class UserView {
     private final SimpleStringProperty login;
     private final SimpleIntegerProperty roleId;
     private final SimpleIntegerProperty id;
+    private final SimpleStringProperty password;
 
-    public UserView(String name, String lastname, String fathername, String login, Integer roleId, Integer id) {
+    public UserView(String name, String lastname, String fathername, String login, Integer roleId,
+                    Integer id, String password) {
         this.name = new SimpleStringProperty(name);
         this.lastname = new SimpleStringProperty(lastname);
         this.fathername = new SimpleStringProperty(fathername);
         this.login = new SimpleStringProperty(login);
         this.roleId = new SimpleIntegerProperty(roleId);
         this.id = new SimpleIntegerProperty(id);
+        this.password = new SimpleStringProperty(password);
+    }
+
+    public String getPassword() {
+        return password.get();
+    }
+
+    public SimpleStringProperty passwordProperty() {
+        return password;
     }
 
     public int getId() {

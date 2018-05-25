@@ -16,6 +16,6 @@ public interface UserService {
     Call<User> deleteUser(@Path("id") Integer id);
 
     @PUT("users/{id}")
-    Call<User> putUser(@Path("id") Integer id);
+    Call<User> putUser(@Path("id") Integer id, @Body User user);
 
 }

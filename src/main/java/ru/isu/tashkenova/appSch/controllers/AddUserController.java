@@ -58,7 +58,7 @@ public class AddUserController {
 
         RetrofitService.RetrofitBuild().addUser(user).execute();
         UsersController.data.add(new UserView(user.getName(), user.getSurname(),
-                user.getFathername(), user.getLogin(), user.getRoleId(), user.getId()));
+                user.getFathername(), user.getLogin(), user.getRoleId(), user.getId(), user.getPassword()));
 
         name.getScene().getWindow().hide();
 
