@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="791.0" prefWidth="1031.0" style="-fx-background-color: #fFffff;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ZavuchPanelController">
+   <children>
+      <Button layoutX="138.0" layoutY="522.0" mnemonicParsing="false" onAction="#buttonViewClick" prefHeight="63.0" prefWidth="345.0" style="-fx-background-color: #008ae6;" text="Просмотреть расписание" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+      <Button layoutX="551.0" layoutY="522.0" mnemonicParsing="false" onAction="#buttonChangeClick" prefHeight="63.0" prefWidth="338.0" style="-fx-background-color: #008ae6;" text="Изменить расписание" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+      <TitledPane animated="false" layoutX="165.0" layoutY="103.0" prefHeight="147.0" prefWidth="702.0" text="Нагрузка">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="95.0" prefWidth="656.0">
+               <children>
+                  <Button layoutX="263.0" layoutY="28.0" mnemonicParsing="false" onAction="#buttonSubjectClick" prefHeight="63.0" prefWidth="174.0" style="-fx-background-color: #008ae6;" text="Предметы" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="30.0" layoutY="28.0" mnemonicParsing="false" onAction="#buttonClassesClick" prefHeight="63.0" prefWidth="174.0" style="-fx-background-color: #008ae6;" text="Классы" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="479.0" layoutY="28.0" mnemonicParsing="false" onAction="#buttonTeachersClick" prefHeight="63.0" prefWidth="182.0" style="-fx-background-color: #008ae6;" text="Учителя" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="165.0" layoutY="296.0" prefHeight="147.0" prefWidth="702.0" text="Школа">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+             <Button layoutX="148.0" layoutY="28.0" mnemonicParsing="false" onAction="#buttonCabinetsClick" prefHeight="63.0" prefWidth="174.0" style="-fx-background-color: #008ae6;" text="Кабинеты" textFill="WHITE">
+                <font>
+                   <Font size="26.0" />
+                </font>
+             </Button>
+             <Button layoutX="375.0" layoutY="28.0" mnemonicParsing="false" onAction="#buttonRingsClick" prefHeight="63.0" prefWidth="179.0" style="-fx-background-color: #008ae6;" text="Звонки" textFill="WHITE">
+                <font>
+                   <Font size="26.0" />
+                </font>
+             </Button>
+          </AnchorPane>
+        </content>
+      </TitledPane>
+      <Label fx:id="l" layoutX="880.0" layoutY="31.0" text="Завуч" />
+      <Button layoutX="942.0" layoutY="26.0" mnemonicParsing="false" onAction="#buttonExitClick" text="Выход" />
+   </children>
+</AnchorPane>
