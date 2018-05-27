@@ -24,7 +24,7 @@
       </TableView>
       <Button layoutX="796.0" layoutY="653.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Сохранить изменения" />
       <Button layoutX="830.0" layoutY="57.0" mnemonicParsing="false" onAction="#deleteButtonClicked" text="Удалить предмет" />
-      <Button layoutX="748.0" layoutY="57.0" mnemonicParsing="false" onAction="#selectButtonClicked" text="Выбрать" />
+      <Button layoutX="748.0" layoutY="57.0" mnemonicParsing="false" onAction="#addButtonClicked" text="Выбрать" />
 
     </children>
 </AnchorPane>

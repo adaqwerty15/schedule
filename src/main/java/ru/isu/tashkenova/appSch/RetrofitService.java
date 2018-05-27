@@ -16,7 +16,7 @@ public class RetrofitService  {
         Gson gson = new GsonBuilder().setLenient().create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://mysterious-mountain-44553.herokuapp.com/")
+                .baseUrl("https://protected-temple-84049.herokuapp.com/")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

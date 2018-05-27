@@ -3,17 +3,13 @@ package ru.isu.tashkenova.appSch.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
-import javafx.scene.input.MouseEvent;
 
-public class SubjectsController implements ListEditor {
+import java.io.IOException;
 
+public class SubjectsController  implements ListEditor{
     @FXML
-    private TableView subjectsTable;
+    private TableView<?> subjects;
 
-    @Override
-    public void tableClicked(MouseEvent mouseEvent) {
-
-    }
 
     @Override
     public void saveButtonClicked(ActionEvent actionEvent) {
@@ -21,17 +17,17 @@ public class SubjectsController implements ListEditor {
     }
 
     @Override
-    public void deleteButtonClicked(ActionEvent actionEvent) {
+    public void deleteButtonClicked(ActionEvent actionEvent) throws IOException {
 
     }
 
     @Override
-    public void addButtonClicked(ActionEvent actionEvent) {
+    public void addButtonClicked(ActionEvent actionEvent) throws IOException, Exception {
 
     }
 
     @Override
-    public void initialize() {
+    public void initialize() throws IOException {
 
     }
 }

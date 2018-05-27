@@ -1,14 +1,19 @@
 package ru.isu.tashkenova.appSch.controllers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import ru.isu.tashkenova.appSch.RetrofitService;
+import ru.isu.tashkenova.appSch.Role;
 import ru.isu.tashkenova.appSch.User;
 import ru.isu.tashkenova.appSch.UserView;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ChangeUserController  {
     @FXML
@@ -24,7 +29,7 @@ public class ChangeUserController  {
     private TextField ctfathername;
 
     @FXML
-    private TextField ctroleId;
+    private ChoiceBox ctroleId;
 
     @FXML
     private TextField ctlogin;
@@ -36,16 +41,24 @@ public class ChangeUserController  {
     UserView userv;
     User user = new User();
     int id;
+    ArrayList<String> s = new ArrayList<>();
 
-    public void setUserv(UserView userv, int id) {
+    public void setUserv(UserView userv, int id, ObservableList<Role> l) {
+
+        for (Role role:l) {
+            s.add(role.name);
+        }
+
+        ctroleId.setItems(FXCollections.observableArrayList(s));
         this.userv = userv;
         ctname.setText(userv.getName());
         ctsurname.setText(userv.getLastname());
         ctfathername.setText(userv.getFathername());
-        ctroleId.setText(String.valueOf(userv.getRoleId()));
+        ctroleId.setValue(userv.getRole());
         ctlogin.setText(userv.getLogin());
         ctpassword.setText(userv.getPassword());
         this.id = id;
+
     }
 
     public void initialize() {
@@ -56,13 +69,15 @@ public class ChangeUserController  {
         String user_name = ctname.getText();
         String user_surname = ctsurname.getText();
         String user_fathername = ctfathername.getText();
-        int user_roleId = -1;
+        int user_roleId = 2;
+        String user_rolename = String.valueOf(ctroleId.getValue());
+
         try {
-            user_roleId = Integer.parseInt(ctroleId.getText());
+            user_roleId = s.indexOf(ctroleId.getValue());
         }
 
         catch (Exception e) {
-            user_roleId = -1;
+            user_roleId = 2;
         }
 
         String user_login = ctlogin.getText();
@@ -75,7 +90,7 @@ public class ChangeUserController  {
 
         RetrofitService.RetrofitBuild().putUser(userv.getId(), user).execute();
         UsersController.data.set(id,new UserView(user.getName(), user.getSurname(),
-                user.getFathername(), user.getLogin(), user.getRoleId(), user.getId(), user.getPassword()));
+                user.getFathername(), user.getLogin(), user.getRoleId(), user_rolename, user.getId(), user.getPassword()));
 
 
         cname.getScene().getWindow().hide();

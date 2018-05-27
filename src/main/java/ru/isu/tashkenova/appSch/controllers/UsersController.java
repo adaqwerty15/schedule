@@ -16,10 +16,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import retrofit2.Response;
-import ru.isu.tashkenova.appSch.RetrofitService;
-import ru.isu.tashkenova.appSch.User;
-import ru.isu.tashkenova.appSch.UserService;
-import ru.isu.tashkenova.appSch.UserView;
+import ru.isu.tashkenova.appSch.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -28,6 +25,7 @@ public class UsersController implements ListEditor{
 
     public static ObservableList<UserView> data = FXCollections.observableArrayList();
     UserService service;
+    ObservableList<Role> content;
 
 
     @FXML
@@ -43,7 +41,7 @@ public class UsersController implements ListEditor{
     private TableColumn<UserView, String> columnfatherrname;
 
     @FXML
-    private TableColumn<UserView, Integer> columnRoleId;
+    private TableColumn<UserView, String> columnRoleId;
 
     @FXML
     private TableColumn<UserView, String> columnlogin;
@@ -53,13 +51,6 @@ public class UsersController implements ListEditor{
 
 
 
-    ObservableList content;
-
-
-    @Override
-    public void tableClicked(MouseEvent mouseEvent) {
-
-    }
 
     @Override
     public void saveButtonClicked(ActionEvent actionEvent) {
@@ -70,28 +61,33 @@ public class UsersController implements ListEditor{
     @Override
     public void initialize() throws IOException {
 
-        columnName.setCellValueFactory(celldata -> celldata.getValue().nameProperty());
-        columnSurname.setCellValueFactory(celldata -> celldata.getValue().lastnameProperty());
-        columnRoleId.setCellValueFactory(celldata -> celldata.getValue().roleIdProperty().asObject());
-        columnfatherrname.setCellValueFactory(celldata -> celldata.getValue().fathernameProperty());
-        columnlogin.setCellValueFactory(celldata -> celldata.getValue().loginProperty());
-
         Gson gson = new GsonBuilder()
                 .setDateFormat("MMM dd, yyyy")
                 .create();
 
         service = RetrofitService.RetrofitBuild();
 
-        Response<List<User>> users = service.getUsers().execute();
-        content = FXCollections.observableArrayList(
-                users.body()
+        columnName.setCellValueFactory(celldata -> celldata.getValue().nameProperty());
+        columnSurname.setCellValueFactory(celldata -> celldata.getValue().lastnameProperty());
+        columnRoleId.setCellValueFactory(celldata -> celldata.getValue().roleProperty());
+        columnfatherrname.setCellValueFactory(celldata -> celldata.getValue().fathernameProperty());
+        columnlogin.setCellValueFactory(celldata -> celldata.getValue().loginProperty());
+
+        Response<List<Role>> roles = service.getRole().execute();
+         content = FXCollections.observableArrayList(
+                roles.body()
         );
-        //System.out.print(content.toString());
+
+
+        Response<List<User>> users = service.getUsers().execute();
+
 
         for (User w: users.body()) {
             User user = gson.fromJson(gson.toJson(w), User.class);
             data.add(new UserView(user.getName(), user.getSurname(),
-                    user.getFathername(), user.getLogin(), user.getRoleId(), user.getId(), user.getPassword()));
+                    user.getFathername(), user.getLogin(), user.getRoleId(), content.get(user.getRoleId()).name, user.getId(), user.getPassword()));
+
+
         }
         usersTable.setItems(data);
 
@@ -115,12 +111,14 @@ public class UsersController implements ListEditor{
 
     @Override
     public void addButtonClicked(ActionEvent actionEvent) throws Exception {
-        Stage stage_add = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        Parent root_add = fxmlLoader.load(getClass().getClassLoader().getResource("views/add_user.fxml"));
-        stage_add.setTitle("Добавить пользователя");
-        stage_add.setScene(new Scene(root_add, 456, 439));
-        stage_add.show();
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/add_user.fxml"));
+        Parent root_add = fxmlLoader.load();
+        AddUserController c = fxmlLoader.getController();
+        c.setChoiseBox(content);
+        stage.setTitle("Добавить пользователя");
+        stage.setScene(new Scene(root_add, 456, 439));
+        stage.show();
         usersTable.refresh();
 
     }
@@ -131,7 +129,7 @@ public class UsersController implements ListEditor{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/change_user.fxml"));
         Parent root_add = fxmlLoader.load();
         ChangeUserController c = fxmlLoader.getController();
-        c.setUserv(user, usersTable.getSelectionModel().getSelectedIndex());
+        c.setUserv(user, usersTable.getSelectionModel().getSelectedIndex(), content);
         stage_add.setTitle("Изменить пользователя");
         stage_add.setScene(new Scene(root_add, 456, 439));
         stage_add.show();

@@ -18,4 +18,10 @@ public interface UserService {
     @PUT("users/{id}")
     Call<User> putUser(@Path("id") Integer id, @Body User user);
 
+    @GET("role")
+    Call<List<Role>> getRole();
+
+    @GET("cabinet")
+    Call<List<Cabinet>> getCabinet();
+
 }

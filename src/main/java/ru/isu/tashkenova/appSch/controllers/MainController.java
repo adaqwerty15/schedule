@@ -5,10 +5,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.control.Label;
 
+import java.awt.*;
 
 public class MainController {
     @FXML
@@ -29,16 +30,11 @@ public class MainController {
                  l = true;
                 break;
             case "teacher":
-                System.out.println("teacher");
-                item = "views/teacherdashboard.fxml";
+                item = "views/show_demo.fxml";
                 l = true;
                 break;
-            case "zavuch":
-                item = "views/zavuchdashboard.fxml";
-                l = true;
-                break;
-            case "student":
-                item = "views/studentdashboard.fxml";
+            case "user":
+                item = "views/show_demo.fxml";
                 l = true;
                 break;
             default:
@@ -52,7 +48,10 @@ public class MainController {
             Stage stage = new Stage();
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource(item));
             stage.setTitle("Shedule");
-            stage.setScene(new Scene(root, 1031, 791));
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+            double width = screenSize.width;
+            double height = screenSize.getHeight();
+            stage.setScene(new Scene(root, width-10, height-80));
             stage.show();
         }
 
