@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9207b2dd-b509-4aca-abd6-a504f3949fdd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/isu/tashkenova/appSch/controllers/SchemeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/views/rasp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/views/rasp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CreateSheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CreateSheduleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SchemeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SchemeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/views/rasp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/rasp.fxml" afterDir="false" />
     </list>
@@ -82,36 +87,28 @@
       <file leaf-file-name="SchemeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SchemeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+            <state relative-caret-position="255">
+              <caret line="163" column="21" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#785#793#0" expanded="true" />
-                <element signature="e#1040#1048#0" expanded="true" />
+                <element signature="e#764#772#0" expanded="true" />
+                <element signature="e#1019#1027#0" expanded="true" />
+                <element signature="e#5609#5796#0" expanded="true" />
+                <element signature="e#5795#5796#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rasp.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/rasp.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloDragAndDrop.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/HelloDragAndDrop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="57" />
+            <state relative-caret-position="257">
+              <caret line="93" column="33" lean-forward="true" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4434#4435#0" expanded="true" />
-                <element signature="e#4474#4475#0" expanded="true" />
+                <element signature="e#2737#2957#0" expanded="true" />
+                <element signature="e#2956#2957#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -481,8 +478,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/views/add_user.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/views/change_user.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/views/createShedule.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/HelloDragAndDrop.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CreateSheduleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/HelloDragAndDrop.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/rasp.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SchemeController.java" />
       </list>
@@ -501,7 +498,6 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -563,6 +559,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -651,6 +648,16 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="appSch" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -779,16 +786,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="appSch" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-    </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="filePath" />
@@ -903,20 +900,20 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2022792" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.25213677" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2022792" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="6" weight="0.24697986" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.24697986" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.27600554" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399361" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24966443" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -929,17 +926,16 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.27600554" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30769232" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.25213677" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.31006712" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3295583" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.25213677" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30769232" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Designer" order="6" />
-      <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.399361" />
@@ -949,6 +945,7 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="3" weight="0.1965812" />
+      <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.1039886" />
       <window_info anchor="right" id="Maven Projects" order="7" />
@@ -982,12 +979,28 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SchemeController.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#764#772#0" expanded="true" />
+            <element signature="e#1019#1027#0" expanded="true" />
+            <element signature="e#5609#5796#0" expanded="true" />
+            <element signature="e#5795#5796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SchemeController.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#785#793#0" expanded="true" />
-            <element signature="e#1040#1048#0" expanded="true" />
+            <element signature="e#764#772#0" expanded="true" />
+            <element signature="e#1019#1027#0" expanded="true" />
+            <element signature="e#5609#5796#0" expanded="true" />
+            <element signature="e#5795#5796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -998,8 +1011,10 @@
           <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#785#793#0" expanded="true" />
-            <element signature="e#1040#1048#0" expanded="true" />
+            <element signature="e#764#772#0" expanded="true" />
+            <element signature="e#1019#1027#0" expanded="true" />
+            <element signature="e#5609#5796#0" expanded="true" />
+            <element signature="e#5795#5796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1199,27 +1214,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/javafx-src.zip!/javafx/scene/layout/Region.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="263">
+          <caret line="616" column="22" selection-start-line="616" selection-start-column="22" selection-end-line="616" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CreateSheduleController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/javafx-src.zip!/javafx/scene/layout/Background.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        <state relative-caret-position="-9">
+          <caret line="205" column="11" selection-start-line="205" selection-start-column="11" selection-end-line="205" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/HelloDragAndDrop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="57" />
+        <state relative-caret-position="189">
+          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4434#4435#0" expanded="true" />
@@ -1228,22 +1240,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/rasp.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/CreateSheduleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="229">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="93" column="33" lean-forward="true" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2737#2957#0" expanded="true" />
+            <element signature="e#2956#2957#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/isu/tashkenova/appSch/controllers/SchemeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+        <state relative-caret-position="255">
+          <caret line="163" column="21" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#785#793#0" expanded="true" />
-            <element signature="e#1040#1048#0" expanded="true" />
+            <element signature="e#764#772#0" expanded="true" />
+            <element signature="e#1019#1027#0" expanded="true" />
+            <element signature="e#5609#5796#0" expanded="true" />
+            <element signature="e#5795#5796#0" expanded="true" />
           </folding>
         </state>
       </provider>

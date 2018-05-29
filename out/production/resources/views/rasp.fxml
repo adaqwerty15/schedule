@@ -28,7 +28,7 @@
                         <Font size="12.0" />
                      </font>
                   </Label>
-                  <Label fx:id="l2" layoutX="76.0" layoutY="124.0" text="Label" />
+
                </children></AnchorPane>
             </content>
         </ScrollPane>
