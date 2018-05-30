@@ -65,7 +65,7 @@ public class UsersController implements ListEditor{
                 .setDateFormat("MMM dd, yyyy")
                 .create();
 
-        service = RetrofitService.RetrofitBuild();
+        service = RetrofitService.RetrofitBuildU();
 
         columnName.setCellValueFactory(celldata -> celldata.getValue().nameProperty());
         columnSurname.setCellValueFactory(celldata -> celldata.getValue().lastnameProperty());
@@ -84,11 +84,12 @@ public class UsersController implements ListEditor{
 
         for (User w: users.body()) {
             User user = gson.fromJson(gson.toJson(w), User.class);
-            data.add(new UserView(user.getName(), user.getSurname(),
+
+          data.add(new UserView(user.getName(), user.getSurname(),
                     user.getFathername(), user.getLogin(), user.getRoleId(), content.get(user.getRoleId()).name, user.getId(), user.getPassword()));
 
-
         }
+
         usersTable.setItems(data);
 
         usersTable.setOnMouseClicked(new ListViewHandler(){

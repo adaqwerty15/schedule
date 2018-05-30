@@ -48,7 +48,7 @@ public class ClassroomController {
                 .setDateFormat("MMM dd, yyyy")
                 .create();
 
-        service = RetrofitService.RetrofitBuild();
+        service = RetrofitService.RetrofitBuildU();
 
         Response<List<Cabinet>> users = service.getCabinet().execute();
         content = FXCollections.observableArrayList(

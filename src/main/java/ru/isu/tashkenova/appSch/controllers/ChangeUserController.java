@@ -88,7 +88,7 @@ public class ChangeUserController  {
                 user_fathername, user_login, user_password, 1);
 
 
-        RetrofitService.RetrofitBuild().putUser(userv.getId(), user).execute();
+        RetrofitService.RetrofitBuildU().putUser(userv.getId(), user).execute();
         UsersController.data.set(id,new UserView(user.getName(), user.getSurname(),
                 user.getFathername(), user.getLogin(), user.getRoleId(), user_rolename, user.getId(), user.getPassword()));
 
