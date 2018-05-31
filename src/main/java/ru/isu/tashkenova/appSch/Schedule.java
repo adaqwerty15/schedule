@@ -5,31 +5,38 @@ public class Schedule {
     public int subjectId;
     public int studentClassId;
     public int cabinetId;
+    public int teacherId;
 
-    public int numberOfTheSchema;
+    public String numberOfTheSchema;
     public int numberOfTheLesson;
     int errorCode;
 
-    public Schedule(int id, int subjectId, int studentClassId, int cabinetId,  int numberOfTheSchema,
-                    int numberOfTheLesson, int errorCode) {
+    public Schedule(int id, int subjectId, int studentClassId, int cabinetId, int teacherId, String numberOfTheSchema, int numberOfTheLesson, int errorCode) {
         this.id = id;
         this.subjectId = subjectId;
         this.studentClassId = studentClassId;
         this.cabinetId = cabinetId;
-
+        this.teacherId = teacherId;
         this.numberOfTheSchema = numberOfTheSchema;
         this.numberOfTheLesson = numberOfTheLesson;
         this.errorCode = errorCode;
     }
 
-
-    public Schedule(int subjectId, int studentClassId, int cabinetId, int numberOfTheSchema, int numberOfTheLesson) {
+    public Schedule(int subjectId, int studentClassId, int cabinetId, int teacherId, String numberOfTheSchema, int numberOfTheLesson) {
         this.subjectId = subjectId;
         this.studentClassId = studentClassId;
         this.cabinetId = cabinetId;
-
+        this.teacherId = teacherId;
         this.numberOfTheSchema = numberOfTheSchema;
         this.numberOfTheLesson = numberOfTheLesson;
+    }
+
+    public int getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(int teacherId) {
+        this.teacherId = teacherId;
     }
 
     public int getId() {
@@ -65,12 +72,11 @@ public class Schedule {
     }
 
 
-
-    public int getNumberOfTheSchema() {
+    public String getNumberOfTheSchema() {
         return numberOfTheSchema;
     }
 
-    public void setNumberOfTheSchema(int numberOfTheSchema) {
+    public void setNumberOfTheSchema(String numberOfTheSchema) {
         this.numberOfTheSchema = numberOfTheSchema;
     }
 

@@ -11,22 +11,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="791.0" prefWidth="1031.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ClassEditorController">
+<AnchorPane prefHeight="680.0" prefWidth="1037.0" style="-fx-background-color: #FCFDFD;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ClassEditorController">
    <children>
-      <TabPane layoutX="90.0" layoutY="109.0" prefHeight="617.0" prefWidth="851.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+      <Label layoutX="63.0" layoutY="32.0" prefHeight="42.0" prefWidth="143.0" text="Имя класса" textFill="#1d6cbf">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="-3.0" layoutY="109.0" prefHeight="585.0" prefWidth="1040.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="109.0">
         <tabs>
           <Tab text="Общая информация">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="924.0" style="-fx-background-color: #FCFDFD;">
                      <children>
                         <Label layoutX="41.0" layoutY="167.0" text="Cмена">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Button layoutX="656.0" layoutY="520.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Сохранить изменения" />
                         <ChoiceBox layoutX="172.0" layoutY="165.0" prefWidth="150.0" />
-                        <Button layoutX="703.0" layoutY="57.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="35.0" prefWidth="125.0" text="Удалить класс" />
                         <TextField layoutX="172.0" layoutY="58.0" />
                         <TextField layoutX="172.0" layoutY="108.0" />
                         <Label layoutX="35.0" layoutY="58.0" text="Код класса">
@@ -39,31 +42,33 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
+                        <Button layoutX="876.0" layoutY="32.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="42.0" prefWidth="134.0" style="-fx-background-color: #FAAC58;" text="Удалить класс" />
                      </children></AnchorPane>
             </content>
           </Tab>
           <Tab text="Нагрузка">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="591.0" prefWidth="851.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="1037.0">
                      <children>
-                        <TableView layoutX="47.0" layoutY="58.0" onMouseClicked="#tableClicked" prefHeight="463.0" prefWidth="770.0">
+                        <TableView editable="true" layoutX="47.0" layoutY="58.0" onMouseClicked="#tableClicked" prefHeight="462.0" prefWidth="770.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="58.0">
                           <columns>
                               <TableColumn prefWidth="363.0" text="Учитель" />
                             <TableColumn prefWidth="406.0" text="Название предмета" />
                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
                         </TableView>
-                        <Button layoutX="645.0" layoutY="537.0" mnemonicParsing="false" onAction="#saveWorkloadButtonClicked" text="Сохранить изменения" />
-                        <Button layoutX="758.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteSubButtonClicked" text="Удалить" />
-                        <Button layoutX="681.0" layoutY="14.0" mnemonicParsing="false" onAction="#addButtonClicked" text="Выбрать" />
+                        <Button layoutX="846.0" layoutY="58.0" mnemonicParsing="false" onAction="#saveWorkloadButtonClicked" prefHeight="52.0" prefWidth="156.0" style="-fx-background-color: #008ae6;" text="Сохранить изменения" textFill="WHITE" AnchorPane.rightAnchor="35.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Button>
+                        <Button layoutX="744.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteSubButtonClicked" prefHeight="27.0" prefWidth="73.0" text="Удалить" AnchorPane.rightAnchor="220.0" />
+                        <Button layoutX="652.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeButtonClicked" prefHeight="27.0" prefWidth="73.0" text="Изменить" AnchorPane.rightAnchor="320.0" />
                      </children></AnchorPane>
             </content>
           </Tab>
         </tabs>
       </TabPane>
-      <Label layoutX="95.0" layoutY="55.0" text="Имя класса">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

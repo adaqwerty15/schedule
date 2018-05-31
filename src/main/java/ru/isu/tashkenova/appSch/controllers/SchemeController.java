@@ -23,6 +23,7 @@ import retrofit2.Response;
 import ru.isu.tashkenova.appSch.*;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 
@@ -49,7 +50,7 @@ public class SchemeController {
     @FXML
     private ChoiceBox<String> classchoice = new ChoiceBox<String>();
 
-    public boolean valid;
+    public boolean valid = true;
     public int dayId;
 
 
@@ -58,14 +59,26 @@ public class SchemeController {
     public int teacherId;
     public int subjectId;
     public int choiceClassId;
+    public String numberSchemaId;
+    public String nameSchema;
     public LabelNew[][] labels;
 
-    public void setDayId (int dayId) {
+    public void setDayId (int dayId) throws IOException {
         this.dayId = dayId;
+        Date d = new Date();
+        SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
+        SimpleDateFormat format2 = new SimpleDateFormat("ddMMyyyyhhmmss");
+        numberSchemaId = format2.format(d);
+        nameSchema = "Схема от "+ format1.format(d);
+        RetrofitService.RetrofitBuildW().addscheduleOwner(new ScheduleOwner(0, numberSchemaId, nameSchema, 0, dayId, valid,0 )).execute();
+
     }
 
 
     public void initialize() throws IOException {
+
+
+
 
         Gson gson = new GsonBuilder()
                 .setDateFormat("MMM dd, yyyy")
@@ -77,6 +90,9 @@ public class SchemeController {
         contentUsers = FXCollections.observableArrayList(
                 users_s.body()
         );
+
+
+
 
         HashMap<Integer, User> users = new HashMap<>();
         for (int i=0; i<contentUsers.size(); i++) {
@@ -405,15 +421,29 @@ public class SchemeController {
     }
 
 
-    public void saveClick(ActionEvent actionEvent) {
+    public void saveClick(ActionEvent actionEvent) throws IOException {
         ArrayList<Schedule> schedules = new ArrayList<Schedule>();
           for(int i=1; i<rows; i++)
               for (int j=1; j<cols;j++) {
               schedules.add(new Schedule(labels[i][j].getSubjectId(),j-1,
-                      0, 1, 1, i));
+                      0, labels[i][j].getTeacherId(), numberSchemaId, i));
               }
 
-        System.out.println(schedules);
+        Response<List<Schedule>> schedule = service.getschedule().execute();
+
+        //service.deleteSchedule(numberSchemaId);
+        for (Schedule s:schedules) {
+            service.addschedule(s).execute();
+        }
+        System.out.println("Yes");
+//
+//        for(Schedule s: schedule.body()) {
+//            if (s.numberOfTheSchema == numberSchemaId) {
+//
+//            }
+//        }
+
+
 
     }
 }

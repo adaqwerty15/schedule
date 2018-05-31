@@ -1,15 +1,16 @@
 package ru.isu.tashkenova.appSch;
 
+
 public class ScheduleOwner {
     public int id;
-    public int numberOfTheSchemaId;
+    public String numberOfTheSchemaId;
     public String name;
-    public String userOwnerId;
+    public int userOwnerId;
     public int dayId;
     public boolean valid;
     public int errorCode;
 
-    public ScheduleOwner(int id, int numberOfTheSchemaId, String name, String userOwnerId, int dayId, boolean valid, int errorCode) {
+    public ScheduleOwner(int id, String numberOfTheSchemaId, String name, int userOwnerId, int dayId, boolean valid, int errorCode) {
         this.id = id;
         this.numberOfTheSchemaId = numberOfTheSchemaId;
         this.name = name;
@@ -19,7 +20,7 @@ public class ScheduleOwner {
         this.errorCode = errorCode;
     }
 
-    public ScheduleOwner(int numberOfTheSchemaId, String name, String userOwnerId, int dayId, boolean valid) {
+    public ScheduleOwner(String numberOfTheSchemaId, String name, int userOwnerId, int dayId, boolean valid) {
         this.numberOfTheSchemaId = numberOfTheSchemaId;
         this.name = name;
         this.userOwnerId = userOwnerId;
@@ -35,11 +36,11 @@ public class ScheduleOwner {
         this.id = id;
     }
 
-    public int getNumberOfTheSchemaId() {
+    public String getNumberOfTheSchemaId() {
         return numberOfTheSchemaId;
     }
 
-    public void setNumberOfTheSchemaId(int numberOfTheSchemaId) {
+    public void setNumberOfTheSchemaId(String numberOfTheSchemaId) {
         this.numberOfTheSchemaId = numberOfTheSchemaId;
     }
 
@@ -51,11 +52,11 @@ public class ScheduleOwner {
         this.name = name;
     }
 
-    public String getUserOwnerId() {
+    public int getUserOwnerId() {
         return userOwnerId;
     }
 
-    public void setUserOwnerId(String userOwnerId) {
+    public void setUserOwnerId(int userOwnerId) {
         this.userOwnerId = userOwnerId;
     }
 
@@ -90,5 +91,16 @@ public class ScheduleOwner {
 
     public ScheduleOwner(int errorCode) {
         this.errorCode = 0;
+    }
+
+    @Override
+    public String toString() {
+        return "ScheduleOwner{" +
+                "id=" + id +
+                ", numberOfTheSchemaId='" + numberOfTheSchemaId + '\'' +
+                ", name='" + name + '\'' +
+                ", userOwnerId=" + userOwnerId +
+                ", dayId=" + dayId +
+                '}';
     }
 }

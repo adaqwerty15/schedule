@@ -1,22 +1,31 @@
 package ru.isu.tashkenova.appSch.controllers;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import retrofit2.Response;
+import ru.isu.tashkenova.appSch.*;
 
 import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CreateSheduleController {
     @FXML
@@ -26,7 +35,13 @@ public class CreateSheduleController {
     private Button createScheme;
 
     @FXML
-    private TableView<?> scheme;
+    private TableView<CreateScheduleView> scheme = new TableView<>();
+
+    @FXML
+    private TableColumn<CreateScheduleView, String> columnName;
+
+    @FXML
+    private TableColumn<CreateScheduleView, String> columnDay;
 
     @FXML
     private Button changeScheme;
@@ -34,15 +49,49 @@ public class CreateSheduleController {
     @FXML
     private Button deleteScheme;
     ArrayList<String> a;
+    WorkloadService service;
+    ObservableList<CreateScheduleView> data = FXCollections.observableArrayList();
 
 
-    public void initialize () {
+    public void initialize () throws IOException {
         a= new ArrayList<String>(Arrays.asList("Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"));
+        Gson gson = new GsonBuilder()
+                .setDateFormat("MMM dd, yyyy")
+                .create();
+
+        service = RetrofitService.RetrofitBuildW();
+
+        columnName.setCellValueFactory(celldata -> celldata.getValue().nameProperty());
+        columnDay.setCellValueFactory(celldata -> celldata.getValue().dayProperty());
+
+        Response<List<ScheduleOwner>> schemes = service.getscheduleOwner().execute();
+
+
+        for (ScheduleOwner w: schemes.body()) {
+            ScheduleOwner owner = gson.fromJson(gson.toJson(w), ScheduleOwner.class);
+            if (owner.getDayId()==0)
+            data.add(new CreateScheduleView(owner.getName(), owner.getId(), ""));
+            else
+                data.add(new CreateScheduleView(owner.getName(), owner.getId(), a.get(owner.getDayId())));
+            //a.get(owner.getDayId())
+        }
+
+        scheme.setItems(data);
+
+
+
         day.setItems(FXCollections.observableArrayList(a));
         day.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 day.setStyle("-fx-border-color:#fff");
+            }
+        });
+
+        scheme.setOnMouseClicked(new ListViewHandler(){
+            @Override
+            public void handle(javafx.scene.input.MouseEvent event) {
+                CreateScheduleView scheduleView = scheme.getSelectionModel().getSelectedItem();
             }
         });
     }
@@ -56,6 +105,7 @@ public class CreateSheduleController {
     void createSchemeClick(ActionEvent event) throws IOException {
 
         int d = a.indexOf(day.getValue());
+
         if (d>=0) {
             Stage stage = new Stage();
             day.setStyle("-fx-border-color:#fff");
@@ -75,6 +125,12 @@ public class CreateSheduleController {
     }
 
 
+    class ListViewHandler implements EventHandler<MouseEvent> {
+        @Override
+        public void handle(MouseEvent event) {
+            //this method will be overrided in next step
+        }
+    }
 
     @FXML
     void dayClick(ActionEvent event) {
@@ -82,7 +138,11 @@ public class CreateSheduleController {
     }
 
     @FXML
-    void deleteSchemeClick(ActionEvent event) {
+    void deleteSchemeClick(ActionEvent event) throws IOException {
+        CreateScheduleView scheduleView = scheme.getSelectionModel().getSelectedItem();
+        service.deletescheduleOwner(scheduleView.getId()).execute();
+        data.remove(scheme.getSelectionModel().getSelectedIndex());
+        scheme.refresh();
 
     }
 }
