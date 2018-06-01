@@ -8,15 +8,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService  {
 
-//    static Proxy proxy = new Proxy(Proxy.Type.HTTP,  new InetSocketAddress(
-//            "proxy.isu.ru", 3128));
-    static OkHttpClient client = new OkHttpClient.Builder().build();
+   //static Proxy proxy = new Proxy(Proxy.Type.HTTP,  new InetSocketAddress(
+   //         "proxy.isu.ru", 3128));
+    static OkHttpClient client = new OkHttpClient.Builder().build();//.proxy(proxy).build();
 
     public static UserService RetrofitBuild() {
         Gson gson = new GsonBuilder().setLenient().create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://protected-temple-84049.herokuapp.com/")
+                //.baseUrl("https://protected-temple-84049.herokuapp.com/")
+                .baseUrl("http://localhost:8080/")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

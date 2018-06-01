@@ -6,6 +6,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -26,18 +29,18 @@ public class ClassroomController {
     private Button save;
 
     public static ObservableList<CabinetView> data = FXCollections.observableArrayList();
+
     UserService service;
+    ObservableList content;
 
     @FXML
-    private TableView<CabinetView> tableClassroom = new TableView<>();;
+    private TableView<CabinetView> tableClassroom = new TableView<>();
 
     @FXML
     private TableColumn<CabinetView,Integer>  columnId;
 
     @FXML
     private TableColumn<CabinetView,String> columnName;
-
-    ObservableList content;
 
     @FXML
     void initialize() throws IOException {
@@ -50,11 +53,11 @@ public class ClassroomController {
 
         service = RetrofitService.RetrofitBuild();
 
-        Response<List<Cabinet>> users = service.getCabinet().execute();
+        Response<List<Cabinet>> cabinets = service.getCabinet().execute();
         content = FXCollections.observableArrayList(
-                users.body()
+                cabinets.body()
         );
-        for (Cabinet w: users.body()) {
+        for (Cabinet w: cabinets.body()) {
             Cabinet cabinet = gson.fromJson(gson.toJson(w), Cabinet.class);
             data.add(new CabinetView(cabinet.getId(),cabinet.getName()));
         }
@@ -62,13 +65,23 @@ public class ClassroomController {
     }
 
     @FXML
-    void addButtonClicked(ActionEvent event) {
-
+    void addButtonClicked(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/addClass.fxml"));
+        Parent root_add = fxmlLoader.load();
+        AddClassController c = fxmlLoader.getController();
+        stage.setTitle("Добавить класс");
+        stage.setScene(new Scene(root_add, 456, 439));
+        stage.show();
+        //usersTable.refresh();
     }
 
     @FXML
-    void deleteButtonClicked(ActionEvent event) {
-
+    void deleteButtonClicked(ActionEvent event) throws IOException {
+        CabinetView cabinet = tableClassroom.getSelectionModel().getSelectedItem();
+        service.deleteCabinet(cabinet.getId()).execute();
+        data.remove(tableClassroom.getSelectionModel().getSelectedIndex());
+        //tableClassroom.refresh();
     }
 
     @FXML

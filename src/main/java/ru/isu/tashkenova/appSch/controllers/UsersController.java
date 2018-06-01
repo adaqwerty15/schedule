@@ -106,7 +106,7 @@ public class UsersController implements ListEditor{
         UserView user = usersTable.getSelectionModel().getSelectedItem();
         service.deleteUser(user.getId()).execute();
         data.remove(usersTable.getSelectionModel().getSelectedIndex());
-        usersTable.refresh();
+        //usersTable.refresh();
     }
 
     @Override
@@ -119,7 +119,7 @@ public class UsersController implements ListEditor{
         stage.setTitle("Добавить пользователя");
         stage.setScene(new Scene(root_add, 456, 439));
         stage.show();
-        usersTable.refresh();
+        //usersTable.refresh();
 
     }
 
@@ -134,7 +134,7 @@ public class UsersController implements ListEditor{
         stage_add.setScene(new Scene(root_add, 456, 439));
         stage_add.show();
 
-        usersTable.refresh();
+        //usersTable.refresh();
     }
 
 

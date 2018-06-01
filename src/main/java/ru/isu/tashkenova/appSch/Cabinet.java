@@ -17,5 +17,8 @@ public class Cabinet {
         return name;
     }
 
-
+    @Override
+    public String toString() {
+        return this.id + " " + this.name;
+    }
 }

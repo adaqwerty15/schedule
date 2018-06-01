@@ -21,7 +21,9 @@ public interface UserService {
     @GET("role")
     Call<List<Role>> getRole();
 
-    @GET("cabinet")
+    @GET("/cabinets") // заменить на cabinets без слеша
     Call<List<Cabinet>> getCabinet();
 
+    @DELETE("/cabinets/{id}") // заменить на cabinets без слеша
+    Call<Cabinet> deleteCabinet(@Path("id") Integer id);
 }
