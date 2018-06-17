@@ -9,13 +9,15 @@ public class CreateScheduleView {
     private final SimpleStringProperty name;
     private final SimpleIntegerProperty id;
     private final SimpleStringProperty day;
+    private String numberoftheSchema;
 
 
 
-    public CreateScheduleView(String name, Integer id, String day) {
+    public CreateScheduleView(String name, Integer id, String day, String numberoftheSchema) {
         this.name = new SimpleStringProperty(name);
         this.id = new SimpleIntegerProperty(id);
         this.day = new SimpleStringProperty(day);
+        this.numberoftheSchema = numberoftheSchema;
 
     }
 
@@ -53,6 +55,14 @@ public class CreateScheduleView {
 
     public void setDay(String day) {
         this.day.set(day);
+    }
+
+    public String getNumberoftheSchema() {
+        return numberoftheSchema;
+    }
+
+    public void setNumberoftheSchema(String numberoftheSchema) {
+        this.numberoftheSchema = numberoftheSchema;
     }
 
     @Override

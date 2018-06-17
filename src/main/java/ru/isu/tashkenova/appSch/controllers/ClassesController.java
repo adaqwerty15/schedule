@@ -28,6 +28,8 @@ public class ClassesController {
     @FXML
     private Label m6;
 
+
+
     @FXML
     void addButtonClicked(ActionEvent event) throws IOException {
         Stage stage = new Stage();
@@ -54,7 +56,10 @@ public class ClassesController {
     void labelClassesClicked(MouseEvent event) throws IOException {
         Stage stage = new Stage();
         String s = "Class Editor";
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/classEditor.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/classEditor.fxml"));
+        Parent root = fxmlLoader .load();
+        ClassEditorController cec = fxmlLoader.getController();
+        cec.setClassCode(((Label)event.getSource()).getText());
         stage.setTitle(s);
         stage.setScene(new Scene(root, 1031, 791));
         stage.show();

@@ -70,9 +70,9 @@ public class CreateSheduleController {
         for (ScheduleOwner w: schemes.body()) {
             ScheduleOwner owner = gson.fromJson(gson.toJson(w), ScheduleOwner.class);
             if (owner.getDayId()==0)
-            data.add(new CreateScheduleView(owner.getName(), owner.getId(), ""));
+            data.add(new CreateScheduleView(owner.getName(), owner.getId(), "", owner.numberOfTheSchemaId));
             else
-                data.add(new CreateScheduleView(owner.getName(), owner.getId(), a.get(owner.getDayId())));
+                data.add(new CreateScheduleView(owner.getName(), owner.getId(), a.get(owner.getDayId()), owner.numberOfTheSchemaId));
             //a.get(owner.getDayId())
         }
 
@@ -97,8 +97,19 @@ public class CreateSheduleController {
     }
 
     @FXML
-    void changeSchemeClick(ActionEvent event) {
-
+    void changeSchemeClick(ActionEvent event) throws IOException {
+        CreateScheduleView scheduleView = scheme.getSelectionModel().getSelectedItem();
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/rasp_change.fxml"));
+        Parent root = fxmlLoader.load();
+        stage.setTitle("Change");
+        SchemeChangeController c = fxmlLoader.getController();
+        c.setView(scheduleView);
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        double width = screenSize.width;
+        double height = screenSize.getHeight();
+        stage.setScene(new Scene(root, width-1, height-80));
+        stage.show();
     }
 
     @FXML

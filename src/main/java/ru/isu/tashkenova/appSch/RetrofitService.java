@@ -16,7 +16,8 @@ public class RetrofitService  {
         Gson gson = new GsonBuilder().setLenient().create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://protected-temple-84049.herokuapp.com/")
+                //.baseUrl("https://protected-temple-84049.herokuapp.com/")
+        .baseUrl("http://localhost:8080")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -29,7 +30,8 @@ public class RetrofitService  {
         Gson gson = new GsonBuilder().setLenient().create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://protected-temple-84049.herokuapp.com/")
+                .baseUrl("http://localhost:8080")
+                //.baseUrl("https://protected-temple-84049.herokuapp.com/")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

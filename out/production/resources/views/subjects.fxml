@@ -10,11 +10,11 @@
 <AnchorPane prefHeight="721.0" prefWidth="1054.0" style="-fx-background-color: #fFffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.SubjectsController">
    <children>
       <Pane prefHeight="100.0" prefWidth="1054.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <TableView fx:id="subjects" editable="true" layoutX="74.0" layoutY="180.0" prefHeight="447.0" prefWidth="907.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="180.0">
+      <TableView fx:id="tableSubject" editable="true" layoutX="74.0" layoutY="180.0" prefHeight="447.0" prefWidth="907.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="180.0">
          <columns>
-            <TableColumn prefWidth="37.0" text="№" />
-            <TableColumn prefWidth="269.0" text="Предметы" />
-            <TableColumn prefWidth="279.0" text="Сокращение" />
+            <TableColumn fx:id="columnId" prefWidth="37.0" text="№" />
+            <TableColumn fx:id="columnName" prefWidth="269.0" text="Предметы" />
+            <TableColumn fx:id="columnShortName" prefWidth="279.0" text="Сокращение" />
             <TableColumn prefWidth="321.0" text="Кабинет" />
          </columns>
          <columnResizePolicy>
@@ -28,6 +28,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="630.0" layoutY="128.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" text="Редактировать кабинеты" AnchorPane.rightAnchor="280.0" />
+      <Button layoutX="630.0" layoutY="128.0" mnemonicParsing="false" onAction="#changeButtonClicked" prefHeight="25.0" prefWidth="168.0" text="Редактировать кабинеты" AnchorPane.rightAnchor="280.0" />
    </children>
 </AnchorPane>

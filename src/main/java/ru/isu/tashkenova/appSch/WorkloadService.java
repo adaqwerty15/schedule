@@ -36,6 +36,9 @@ public interface WorkloadService {
     @GET("schedule")
     Call<List<Schedule>> getschedule();
 
+    @GET("schedule/{id}")
+    Call<List<Schedule>> getscheduleOfId(@Path("id") String id);
+
     @DELETE("schedule/{id}")
     Call<Schedule> deleteSchedule(@Path("id") String id);
 

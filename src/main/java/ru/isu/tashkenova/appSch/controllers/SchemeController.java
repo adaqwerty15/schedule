@@ -12,12 +12,14 @@ import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import retrofit2.Response;
 import ru.isu.tashkenova.appSch.*;
@@ -37,6 +39,8 @@ public class SchemeController {
     @FXML
     private GridPaneNew gridpane = new GridPaneNew();
 
+    @FXML
+    private GridPane gp = new GridPane();
 
     @FXML
     private Label img;
@@ -77,7 +81,9 @@ public class SchemeController {
 
     public void initialize() throws IOException {
 
-
+        gp.setPadding(new Insets(10));
+        gp.setPrefWidth(100 * 26);
+        gp.setVgap(15);
 
 
         Gson gson = new GsonBuilder()
@@ -144,52 +150,113 @@ public class SchemeController {
         gridpane.init(cols,rows);
 
         ArrayList<Workload> workload = new ArrayList<>();
-        workload.add(new Workload(1,1, 9));
-        workload.add(new Workload(1,9, 15));
-        workload.add(new Workload(2,1, 9));
-        workload.add(new Workload(2,9, 15));
-        workload.add(new Workload(2,19, 16));
+        workload.add(new Workload(1, 1, 9));
+        workload.add(new Workload(1, 2, 5));
+        workload.add(new Workload(1, 3, 21));
+        workload.add(new Workload(1, 4, 7));
+        workload.add(new Workload(1, 5, 17));
+        workload.add(new Workload(1, 5, 26));
+        workload.add(new Workload(1, 6, 8));
+        workload.add(new Workload(1, 6, 14));
+        workload.add(new Workload(1, 7, 25));
+        workload.add(new Workload(1, 8, 6));
+        workload.add(new Workload(1, 9, 15));
+        workload.add(new Workload(1, 10, 12));
+        workload.add(new Workload(1, 11, 25));
+        workload.add(new Workload(1, 12, 5));
+        workload.add(new Workload(1, 13, 5));
+        workload.add(new Workload(1, 14, 15));
+        workload.add(new Workload(1, 15, 6));
+        workload.add(new Workload(1, 16, 8));
+        workload.add(new Workload(1, 16, 14));
+        workload.add(new Workload(1, 17, 22));
+        workload.add(new Workload(1, 18, 4));
+
+        workload.add(new Workload(2, 1, 9));
+        workload.add(new Workload(2, 2, 5));
+        workload.add(new Workload(2, 3, 21));
+        workload.add(new Workload(2, 4, 7));
+        workload.add(new Workload(2, 5, 17));
+        workload.add(new Workload(2, 5, 26));
+        workload.add(new Workload(2, 7, 25));
+        workload.add(new Workload(2, 8, 6));
+        workload.add(new Workload(2, 9, 15));
+        workload.add(new Workload(2, 10, 12));
+        workload.add(new Workload(2, 11, 25));
+        workload.add(new Workload(2, 12, 5));
+        workload.add(new Workload(2, 13, 5));
+        workload.add(new Workload(2, 14, 15));
+        workload.add(new Workload(2, 15, 6));
+        workload.add(new Workload(2, 16, 8));
+        workload.add(new Workload(2, 16, 14));
+        workload.add(new Workload(2, 17, 22));
+        workload.add(new Workload(2, 18, 4));
+        workload.add(new Workload(2, 19, 16));
 
 
-        ArrayList<WorkloadView> workloadViews = new ArrayList<>();
-        for (int i=0; i<workload.size(); i++) {
-            workloadViews.add(new WorkloadView(students.get(workload.get(i).getStudentClassId()),
-                    subjects.get(workload.get(i).getSubjectId()),users.get(workload.get(i).getUserId())));
-        }
 
 
-        LabelNew labelsScroll[] = new LabelNew[workloadViews.size()];
 
-        for (int i=0; i<workloadViews.size(); i++) {
-            labelsScroll[i] = new LabelNew(workloadViews.get(i).toString(),0, workload.get(i).userId,
-                    true, workload.get(i).subjectId);
-            labelsScroll[i].setStyle("-fx-background-color:#ccc");
-            labelsScroll[i].setLayoutX(10);
-            labelsScroll[i].setLayoutY(50*i+10);
 
-            apane.getChildren().add(labelsScroll[i]);
+        ChangeListener<String> changeListener = new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                boolean exist = false;
+                if (newValue != null) {
+                    ArrayList<WorkloadView> workloadViews = new ArrayList<>();
+                    for (int i = 0; i < workload.size(); i++) {
+                        if ((students.get(workload.get(i).studentClassId)).getCode() == newValue) {
+                            exist = true;
+                            workloadViews.add(new WorkloadView(students.get(workload.get(i).getStudentClassId()),
+                                    subjects.get(workload.get(i).getSubjectId()), users.get(workload.get(i).getUserId())));
+                        }
+                    }
 
-            final int ci = i;
+                    if (!exist) {
+                        // apane.getChildren().clear();
+                        gp.getChildren().clear();
+                    }
 
-            labelsScroll[i].setOnDragDetected(new EventHandler<MouseEvent>() {
-                public void handle(MouseEvent event) {
 
-                    System.out.println("onDragDetected");
-                    Dragboard db = labelsScroll[ci].startDragAndDrop(TransferMode.ANY);
-                    ClipboardContent content = new ClipboardContent();
-                    content.putString(labelsScroll[ci].getText());
-                    teacherId = labelsScroll[ci].getTeacherId();
-                    subjectId = labelsScroll[ci].getSubjectId();
-                    db.setContent(content);
+                    LabelNew labelsScroll[] = new LabelNew[workloadViews.size()];
 
-                    event.consume();
+                    for (int i = 0; i < workloadViews.size(); i++) {
+                        labelsScroll[i] = new LabelNew(workloadViews.get(i).toString(), 0, workload.get(i).userId,
+                                true, workload.get(i).subjectId);
+                        labelsScroll[i].setFont(new Font("Arial", 15));
+                        labelsScroll[i].setPrefWidth(120);
+                        labelsScroll[i].setMinHeight(60);
+                        labelsScroll[i].setAlignment(Pos.CENTER);
+                        labelsScroll[i].setStyle("-fx-background-color:#bfbfbf");
+                        gp.add(labelsScroll[i],0,i);
+
+
+                        //apane.getChildren().add(labelsScroll[i]);
+
+                        final int ci = i;
+
+                        labelsScroll[i].setOnDragDetected(new EventHandler<MouseEvent>() {
+                            public void handle(MouseEvent event) {
+
+                                System.out.println("onDragDetected");
+                                Dragboard db = labelsScroll[ci].startDragAndDrop(TransferMode.ANY);
+                                ClipboardContent content = new ClipboardContent();
+                                content.putString(labelsScroll[ci].getText());
+                                teacherId = labelsScroll[ci].getTeacherId();
+                                subjectId = labelsScroll[ci].getSubjectId();
+                                db.setContent(content);
+
+                                event.consume();
+                            }
+                        });
+                    }
+
                 }
-            });
-        }
-        System.out.println(labelsScroll);
+            }
+            };
 
 
-
+        classchoice.getSelectionModel().selectedItemProperty().addListener(changeListener);
 
         //l1.setText("Литература \nБурзунова Г. Е.");;
 
@@ -378,7 +445,35 @@ public class SchemeController {
                             labels[col][row].setValid(true);
                             labels[col][row].setTeacherId(-1);
                             labels[col][row].setSubjectId(-1);
-                            labels[col][row].setStyle("-fx-background-color:#ffffff;-fx-border-width:0.5;-fx-border-color:black");
+
+                            HashSet<Integer> ids  = new HashSet();
+                            for (int i = 1; i < cols; i++) {
+                                if (labels[col][i].getTeacherId() != -1) {
+                                    if (!ids.contains(labels[col][i].getTeacherId())) {
+                                        ids.add(labels[col][i].getTeacherId());
+                                        labels[col][i].setValid(true);
+                                    }
+                                    else {
+                                        labels[col][i].setValid(false);
+                                    }
+                                }
+
+                                else {
+                                    labels[col][i].setStyle("-fx-background-color:#ffffff;-fx-border-width:0.5;-fx-border-color:black");
+                                }
+
+
+                            }
+
+                            for (int i = 1; i < cols; i++) {
+                                if (!labels[col][i].isValid()) {
+                                    labels[col][i].setId("wrong");
+                                    labels[col][i].setStyle("-fx-background-color:#ff5c33;-fx-border-width:0.5;-fx-border-color:black");
+                                } else {
+                                    labels[col][i].setId("right");
+                                    labels[col][i].setStyle("-fx-background-color:#fff;-fx-border-width:0.5;-fx-border-color:black");
+                                }
+                            }
                         }
 
                         event.consume();
@@ -425,9 +520,12 @@ public class SchemeController {
         ArrayList<Schedule> schedules = new ArrayList<Schedule>();
           for(int i=1; i<rows; i++)
               for (int j=1; j<cols;j++) {
+
               schedules.add(new Schedule(labels[i][j].getSubjectId(),j-1,
                       0, labels[i][j].getTeacherId(), numberSchemaId, i));
               }
+
+        System.out.println(schedules);
 
         Response<List<Schedule>> schedule = service.getschedule().execute();
 
@@ -435,13 +533,12 @@ public class SchemeController {
         for (Schedule s:schedules) {
             service.addschedule(s).execute();
         }
-        System.out.println("Yes");
-//
-//        for(Schedule s: schedule.body()) {
-//            if (s.numberOfTheSchema == numberSchemaId) {
-//
-//            }
-//        }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Изменения сохранены");
+        alert.setHeaderText(null);
+        alert.setTitle("Information");
+        alert.showAndWait();
+
 
 
 

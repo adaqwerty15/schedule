@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="680.0" prefWidth="1037.0" style="-fx-background-color: #FCFDFD;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ClassEditorController">
    <children>
-      <Label layoutX="63.0" layoutY="32.0" prefHeight="42.0" prefWidth="143.0" text="Имя класса" textFill="#1d6cbf">
+      <Label fx:id="nameClass" layoutX="63.0" layoutY="32.0" prefHeight="42.0" prefWidth="143.0" text="Имя класса" textFill="#1d6cbf">
          <font>
             <Font size="24.0" />
          </font>
@@ -50,10 +50,10 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="1037.0">
                      <children>
-                        <TableView editable="true" layoutX="47.0" layoutY="58.0" onMouseClicked="#tableClicked" prefHeight="462.0" prefWidth="770.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="58.0">
+                        <TableView fx:id="tableClasses" editable="true" layoutX="47.0" layoutY="58.0" onMouseClicked="#tableClicked" prefHeight="462.0" prefWidth="770.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="58.0">
                           <columns>
-                              <TableColumn prefWidth="363.0" text="Учитель" />
-                            <TableColumn prefWidth="406.0" text="Название предмета" />
+                              <TableColumn fx:id="columnName" prefWidth="363.0" text="Учитель" />
+                            <TableColumn fx:id="columnNameSubject" prefWidth="406.0" text="Название предмета" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

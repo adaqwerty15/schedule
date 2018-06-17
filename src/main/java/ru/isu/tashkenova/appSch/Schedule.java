@@ -107,11 +107,14 @@ public class Schedule {
     @Override
     public String toString() {
         return "Schedule{" +
-                "subjectId=" + subjectId +
+                "id=" + id +
+                ", subjectId=" + subjectId +
                 ", studentClassId=" + studentClassId +
                 ", cabinetId=" + cabinetId +
-                ", numberOfTheSchema=" + numberOfTheSchema +
+                ", teacherId=" + teacherId +
+                ", numberOfTheSchema='" + numberOfTheSchema + '\'' +
                 ", numberOfTheLesson=" + numberOfTheLesson +
+                ", errorCode=" + errorCode +
                 '}';
     }
 }

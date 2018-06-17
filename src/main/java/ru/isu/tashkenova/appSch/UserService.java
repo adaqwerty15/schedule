@@ -21,7 +21,24 @@ public interface UserService {
     @GET("role")
     Call<List<Role>> getRole();
 
-    @GET("cabinet")
+    @GET("cabinets")
     Call<List<Cabinet>> getCabinet();
+
+    @DELETE("cabinets/{id}")
+    Call<Cabinet> deleteCabinet(@Path("id") Integer id);
+
+    @GET("subject")
+    Call<List<Subject>> getSubject();
+
+    @DELETE("subject/{id}")
+    Call<Subject> deleteSubject(@Path("id") Integer id);
+
+
+    @GET("studentsClass")
+    Call<List<StudentsClass>> getStudetsClasses();
+
+    @GET("workload")
+    Call<List<Workload>> getWorkload();
+
 
 }

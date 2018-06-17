@@ -21,6 +21,11 @@ public class WorkloadView {
         this.user = user;
     }
 
+    public WorkloadView(Subject subject, User user) {
+        this.subject = subject;
+        this.user = user;
+    }
+
     public StudentsClass getStudentClass() {
         return studentClass;
     }

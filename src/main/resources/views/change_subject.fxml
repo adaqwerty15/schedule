@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="240.0" prefWidth="351.0" style="-fx-background-color: #fFffff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ChangeSubjectController">
+   <children>
+      <Pane prefHeight="72.0" prefWidth="397.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="22.0" text="Изменить предмет" textAlignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="save" layoutX="120.0" layoutY="190.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: #008ae6;" text="Готово" />
+
+      <TextField fx:id="name" layoutX="130.0" layoutY="100.0" />
+      <TextField fx:id="shortName" layoutX="130.0" layoutY="146.0" />
+
+
+      <Label layoutX="25.0" layoutY="99.0" text="Название">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="145.0" text="Сокращение">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+
+
+   </children>
+</AnchorPane>
