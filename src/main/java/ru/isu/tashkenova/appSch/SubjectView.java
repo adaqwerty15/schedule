@@ -5,14 +5,14 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class SubjectView {
     private final SimpleIntegerProperty id;
-    private final SimpleIntegerProperty groupName;
+    private final SimpleIntegerProperty groupNumber;
     private final SimpleStringProperty name;
     private final SimpleStringProperty shortName;
 
 
-    public SubjectView(int id, int groupName,String name,String shortName) {
+    public SubjectView(int id, int groupNumber,String name,String shortName) {
         this.id = new SimpleIntegerProperty(id);
-        this.groupName = new SimpleIntegerProperty(groupName);
+        this.groupNumber = new SimpleIntegerProperty(groupNumber);
         this.name = new SimpleStringProperty(name);
         this.shortName = new SimpleStringProperty(shortName);
 
@@ -29,13 +29,13 @@ public class SubjectView {
     }
 
 
-    public int getGrouoName() {
-        return groupName.get();
+    public int getGroupNumber() {
+        return groupNumber.get();
     }
 
 
-    public SimpleIntegerProperty groupNameProperty() {
-        return groupName;
+    public SimpleIntegerProperty groupNumberProperty() {
+        return groupNumber;
     }
 
 

@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import retrofit2.Response;
 import ru.isu.tashkenova.appSch.RetrofitService;
@@ -45,6 +47,9 @@ public class SubjectsController  implements ListEditor{
     @FXML
     private TableColumn<SubjectView,String> columnShortName;
 
+    @FXML
+    private TableColumn<SubjectView,Integer> columnGroup;
+
 
 
 
@@ -54,7 +59,7 @@ public class SubjectsController  implements ListEditor{
         columnId.setCellValueFactory(celldata -> celldata.getValue().idProperty().asObject());
         columnName.setCellValueFactory(celldata -> celldata.getValue().nameProperty());
         columnShortName.setCellValueFactory(celldata -> celldata.getValue().shortNameProperty());
-
+        columnGroup.setCellValueFactory(celldata -> celldata.getValue().groupNumberProperty().asObject());
 
 
         Gson gson = new GsonBuilder()
@@ -69,7 +74,7 @@ public class SubjectsController  implements ListEditor{
                 subjects.body()
 
         );
-        System.out.println(subjects.body().toString());
+
         for (Subject w: subjects.body()) {
             Subject subject = gson.fromJson(gson.toJson(w), Subject.class);
             data.add(new SubjectView(subject.getId(),subject.getGroupNumber(), subject.getName(), subject.getShortName()));
@@ -83,7 +88,7 @@ public class SubjectsController  implements ListEditor{
     @Override
     public void saveButtonClicked(ActionEvent event) {
 
-        Stage stag = (Stage) save.getScene().getWindow();
+        Stage stag = (Stage)save.getScene().getWindow();
         stag.close();
     }
 
@@ -92,9 +97,9 @@ public class SubjectsController  implements ListEditor{
     public void deleteButtonClicked(ActionEvent actionEvent) throws IOException {
 
         SubjectView subject = tableSubject.getSelectionModel().getSelectedItem();
-        service.deleteCabinet(subject.getId()).execute();
+        service.deleteSubject(subject.getId()).execute();
         data.remove(tableSubject.getSelectionModel().getSelectedIndex());
-        //tableClassroom.refresh();
+        tableSubject.refresh();
 
     }
 
@@ -107,7 +112,7 @@ public class SubjectsController  implements ListEditor{
         stage.setTitle("Добавить предмет");
         stage.setScene(new Scene(root_add, 449, 423));
         stage.show();
-        //usersTable.refresh();
+        tableSubject.refresh();
     }
 
 
@@ -117,11 +122,18 @@ public class SubjectsController  implements ListEditor{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/change_subject.fxml"));
         Parent root_add = fxmlLoader.load();
         ChangeSubjectController c = fxmlLoader.getController();
-        c.setNewFormWow(subject.getName(), subject.getShortName());
+        c.setForm(subject, tableSubject.getSelectionModel().getSelectedIndex());
         stage_add.setTitle("Изменить предмет");
-        stage_add.setScene(new Scene(root_add, 300, 240));
+        stage_add.setScene(new Scene(root_add, 449, 423));
         stage_add.show();
 
         //usersTable.refresh();
+    }
+
+    class ListViewHandler implements EventHandler<MouseEvent> {
+        @Override
+        public void handle(MouseEvent event) {
+            //this method will be overrided in next step
+        }
     }
 }

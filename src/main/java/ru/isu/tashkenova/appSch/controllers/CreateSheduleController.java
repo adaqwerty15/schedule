@@ -50,7 +50,7 @@ public class CreateSheduleController {
     private Button deleteScheme;
     ArrayList<String> a;
     WorkloadService service;
-    ObservableList<CreateScheduleView> data = FXCollections.observableArrayList();
+    public  static ObservableList<CreateScheduleView> data = FXCollections.observableArrayList();
 
 
     public void initialize () throws IOException {
@@ -69,10 +69,7 @@ public class CreateSheduleController {
 
         for (ScheduleOwner w: schemes.body()) {
             ScheduleOwner owner = gson.fromJson(gson.toJson(w), ScheduleOwner.class);
-            if (owner.getDayId()==0)
-            data.add(new CreateScheduleView(owner.getName(), owner.getId(), "", owner.numberOfTheSchemaId));
-            else
-                data.add(new CreateScheduleView(owner.getName(), owner.getId(), a.get(owner.getDayId()), owner.numberOfTheSchemaId));
+            data.add(new CreateScheduleView(owner.getName(), owner.getId(), a.get(owner.getDayId()), owner.numberOfTheSchemaId));
             //a.get(owner.getDayId())
         }
 
@@ -152,8 +149,9 @@ public class CreateSheduleController {
     void deleteSchemeClick(ActionEvent event) throws IOException {
         CreateScheduleView scheduleView = scheme.getSelectionModel().getSelectedItem();
         service.deletescheduleOwner(scheduleView.getId()).execute();
+        service.deleteSchedule(scheduleView.getNumberoftheSchema()).execute();
         data.remove(scheme.getSelectionModel().getSelectedIndex());
-        scheme.refresh();
+
 
     }
 }

@@ -68,6 +68,7 @@ public class SchemeController {
     public LabelNew[][] labels;
 
     public void setDayId (int dayId) throws IOException {
+        ArrayList<String> a= new ArrayList<String>(Arrays.asList("Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"));
         this.dayId = dayId;
         Date d = new Date();
         SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
@@ -75,7 +76,7 @@ public class SchemeController {
         numberSchemaId = format2.format(d);
         nameSchema = "Схема от "+ format1.format(d);
         RetrofitService.RetrofitBuildW().addscheduleOwner(new ScheduleOwner(0, numberSchemaId, nameSchema, 0, dayId, valid,0 )).execute();
-
+           CreateSheduleController.data.add(new CreateScheduleView(nameSchema, 0, a.get(dayId), numberSchemaId));
     }
 
 
@@ -123,6 +124,7 @@ public class SchemeController {
         ArrayList<String> stud = new ArrayList<String>();
         for(StudentsClass s: contentStudents)
             stud.add(s.getCode());
+
         classchoice.setItems(FXCollections.observableArrayList(stud));
         classchoice.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -155,8 +157,8 @@ public class SchemeController {
         workload.add(new Workload(1, 3, 21));
         workload.add(new Workload(1, 4, 7));
         workload.add(new Workload(1, 5, 17));
-        workload.add(new Workload(1, 5, 26));
-        workload.add(new Workload(1, 6, 8));
+        //workload.add(new Workload(1, 5, 26));
+        //workload.add(new Workload(1, 6, 8));
         workload.add(new Workload(1, 6, 14));
         workload.add(new Workload(1, 7, 25));
         workload.add(new Workload(1, 8, 6));
@@ -167,7 +169,7 @@ public class SchemeController {
         workload.add(new Workload(1, 13, 5));
         workload.add(new Workload(1, 14, 15));
         workload.add(new Workload(1, 15, 6));
-        workload.add(new Workload(1, 16, 8));
+        //workload.add(new Workload(1, 16, 8));
         workload.add(new Workload(1, 16, 14));
         workload.add(new Workload(1, 17, 22));
         workload.add(new Workload(1, 18, 4));
@@ -177,7 +179,7 @@ public class SchemeController {
         workload.add(new Workload(2, 3, 21));
         workload.add(new Workload(2, 4, 7));
         workload.add(new Workload(2, 5, 17));
-        workload.add(new Workload(2, 5, 26));
+        //workload.add(new Workload(2, 5, 26));
         workload.add(new Workload(2, 7, 25));
         workload.add(new Workload(2, 8, 6));
         workload.add(new Workload(2, 9, 15));
@@ -187,16 +189,11 @@ public class SchemeController {
         workload.add(new Workload(2, 13, 5));
         workload.add(new Workload(2, 14, 15));
         workload.add(new Workload(2, 15, 6));
-        workload.add(new Workload(2, 16, 8));
+        //workload.add(new Workload(2, 16, 8));
         workload.add(new Workload(2, 16, 14));
         workload.add(new Workload(2, 17, 22));
         workload.add(new Workload(2, 18, 4));
         workload.add(new Workload(2, 19, 16));
-
-
-
-
-
 
         ChangeListener<String> changeListener = new ChangeListener<String>() {
             @Override
@@ -520,14 +517,14 @@ public class SchemeController {
         ArrayList<Schedule> schedules = new ArrayList<Schedule>();
           for(int i=1; i<rows; i++)
               for (int j=1; j<cols;j++) {
-
+              if (labels[i][j].getSubjectId()!=-1)
               schedules.add(new Schedule(labels[i][j].getSubjectId(),j-1,
                       0, labels[i][j].getTeacherId(), numberSchemaId, i));
               }
 
         System.out.println(schedules);
 
-        Response<List<Schedule>> schedule = service.getschedule().execute();
+        //Response<List<Schedule>> schedule = service.getschedule().execute();
 
         //service.deleteSchedule(numberSchemaId);
         for (Schedule s:schedules) {

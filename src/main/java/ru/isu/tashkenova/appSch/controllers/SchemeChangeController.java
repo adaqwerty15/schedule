@@ -12,10 +12,7 @@ import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.ColumnConstraints;
@@ -34,6 +31,8 @@ public class SchemeChangeController {
     ObservableList<Subject> contentSubject;
     ObservableList<User> contentUsers;
     ObservableList<StudentsClass> contentStudents;
+    ObservableList<Workload> contentWorkload;
+    ObservableList<Cabinet> contentCabinet;
 
     @FXML
     private GridPaneNew gridpane = new GridPaneNew();
@@ -73,6 +72,7 @@ public class SchemeChangeController {
         gp.setPrefWidth(100 * 26);
         gp.setVgap(15);
 
+        numberSchemaId = view.getNumberoftheSchema();
         this.view = view;
         Gson gson = new GsonBuilder()
                 .setDateFormat("MMM dd, yyyy")
@@ -83,6 +83,11 @@ public class SchemeChangeController {
         Response<List<User>> users_s = service.getUsers().execute();
         contentUsers = FXCollections.observableArrayList(
                 users_s.body()
+        );
+
+        Response<List<Cabinet>> cabinet_s = service.getCabinet().execute();
+        contentCabinet = FXCollections.observableArrayList(
+                cabinet_s.body()
         );
 
         HashMap<Integer, User> users = new HashMap<>();
@@ -123,10 +128,6 @@ public class SchemeChangeController {
             students.put(contentStudents.get(i).getId(),contentStudents.get(i));
         }
 
-
-        //        ArrayList<String> a = new ArrayList<String>(Arrays.asList("","5и","5м", "6л", "6м", "7а", "7б", "8а", "8б", "8и", "8л", "9а", "9е", "9и", "9л", "9м",
-//                "9э", "10а", "10е", "10и", "10л", "10м", "11е", "11и", "11л", "11м", "11э"));
-
         ArrayList<String> time = new ArrayList<String>(Arrays.asList("","8.00-8.40", "8.50-9.30", "9.40-10.20", "10.40-11.20", "11.40-12.20", "12.30-13.10", "13.20-14.00",
                 "14.10-14.50","15.00-15.40","16.00-16.40", "17.00-17.40", "17.50-18.30", "18.40-19.20"));
 
@@ -134,50 +135,10 @@ public class SchemeChangeController {
         cols = stud.size()+1 ;
         gridpane.init(cols,rows);
 
-
-        ArrayList<Workload> workload = new ArrayList<>();
-        workload.add(new Workload(1, 1, 9));
-        workload.add(new Workload(1, 2, 5));
-        workload.add(new Workload(1, 3, 21));
-        workload.add(new Workload(1, 4, 7));
-        workload.add(new Workload(1, 5, 17));
-        workload.add(new Workload(1, 5, 26));
-        workload.add(new Workload(1, 6, 8));
-        workload.add(new Workload(1, 6, 14));
-        workload.add(new Workload(1, 7, 25));
-        workload.add(new Workload(1, 8, 6));
-        workload.add(new Workload(1, 9, 15));
-        workload.add(new Workload(1, 10, 12));
-        workload.add(new Workload(1, 11, 25));
-        workload.add(new Workload(1, 12, 5));
-        workload.add(new Workload(1, 13, 5));
-        workload.add(new Workload(1, 14, 15));
-        workload.add(new Workload(1, 15, 6));
-        workload.add(new Workload(1, 16, 8));
-        workload.add(new Workload(1, 16, 14));
-        workload.add(new Workload(1, 17, 22));
-        workload.add(new Workload(1, 18, 4));
-
-        workload.add(new Workload(2, 1, 9));
-        workload.add(new Workload(2, 2, 5));
-        workload.add(new Workload(2, 3, 21));
-        workload.add(new Workload(2, 4, 7));
-        workload.add(new Workload(2, 5, 17));
-        workload.add(new Workload(2, 5, 26));
-        workload.add(new Workload(2, 7, 25));
-        workload.add(new Workload(2, 8, 6));
-        workload.add(new Workload(2, 9, 15));
-        workload.add(new Workload(2, 10, 12));
-        workload.add(new Workload(2, 11, 25));
-        workload.add(new Workload(2, 12, 5));
-        workload.add(new Workload(2, 13, 5));
-        workload.add(new Workload(2, 14, 15));
-        workload.add(new Workload(2, 15, 6));
-        workload.add(new Workload(2, 16, 8));
-        workload.add(new Workload(2, 16, 14));
-        workload.add(new Workload(2, 17, 22));
-        workload.add(new Workload(2, 18, 4));
-        workload.add(new Workload(2, 19, 16));
+        Response<List<Workload>> workload_s = service.getWorkload().execute();
+        contentWorkload = FXCollections.observableArrayList(
+                workload_s.body()
+        );
 
 
         ChangeListener<String> changeListener = new ChangeListener<String>() {
@@ -186,11 +147,11 @@ public class SchemeChangeController {
                 boolean exist = false;
                 if (newValue != null) {
                     ArrayList<WorkloadView> workloadViews = new ArrayList<>();
-                    for (int i = 0; i < workload.size(); i++) {
-                        if ((students.get(workload.get(i).studentClassId)).getCode() == newValue) {
+                    for (int i = 0; i < contentWorkload.size(); i++) {
+                        if ((students.get(contentWorkload.get(i).studentClassId)).getCode() == newValue) {
                             exist = true;
-                            workloadViews.add(new WorkloadView(students.get(workload.get(i).getStudentClassId()),
-                                    subjects.get(workload.get(i).getSubjectId()), users.get(workload.get(i).getUserId())));
+                            workloadViews.add(new WorkloadView(students.get(contentWorkload.get(i).getStudentClassId()),
+                                    subjects.get(contentWorkload.get(i).getSubjectId()), users.get(contentWorkload.get(i).getUserId())));
                         }
                     }
 
@@ -203,8 +164,8 @@ public class SchemeChangeController {
                     LabelNew labelsScroll[] = new LabelNew[workloadViews.size()];
 
                     for (int i = 0; i < workloadViews.size(); i++) {
-                        labelsScroll[i] = new LabelNew(workloadViews.get(i).toString(), 0, workload.get(i).userId,
-                                true, workload.get(i).subjectId);
+                        labelsScroll[i] = new LabelNew(workloadViews.get(i).toString(), 0, contentWorkload.get(i).userId,
+                                true, contentWorkload.get(i).subjectId);
                         labelsScroll[i].setFont(new Font("Arial", 15));
                         labelsScroll[i].setPrefWidth(120);
                         labelsScroll[i].setMinHeight(60);
@@ -343,6 +304,32 @@ public class SchemeChangeController {
             }
         });
 
+        ContextMenu contextMenu = new ContextMenu();
+
+        ArrayList<MenuItem> items = new ArrayList<>();
+
+        MenuItem item = new MenuItem("Нет кабинета");
+        item.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("");
+            }
+        });
+
+        contextMenu.getItems().add(item);
+
+        for (Cabinet c: contentCabinet) {
+            MenuItem item1 = new MenuItem(c.getName());
+            item1.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    System.out.println(c.getName());
+                }
+            });
+
+            contextMenu.getItems().add(item1);
+        }
+
         for(int i = 1; i<time.size(); i++)
             for (int j=1; j<stud.size()+1; j++) {
                 int selectedCol = j;
@@ -359,6 +346,14 @@ public class SchemeChangeController {
 
                 final int col = i;
                 final int row = j;
+
+                labels[i][j].setOnContextMenuRequested(new EventHandler<ContextMenuEvent>() {
+
+                    @Override
+                    public void handle(ContextMenuEvent event) {
+                        contextMenu.show(labels[col][row], event.getScreenX(), event.getScreenY());
+                    }
+                });
 
                 labels[col][row].setOnDragOver(new EventHandler <DragEvent>() {
                     public void handle(DragEvent event) {
@@ -488,7 +483,6 @@ public class SchemeChangeController {
 
 
 
-        System.out.println(contentSch);
 
         for (Schedule s: contentSch) {
             if (s.subjectId!=-1) {
@@ -503,6 +497,9 @@ public class SchemeChangeController {
 
         }
 
+
+
+        System.out.println(numberSchemaId);
         for (int j = 1; j<rows; j++) {
             HashSet<Integer> ids  = new HashSet();
             for (int i = 1; i < cols; i++) {
@@ -559,13 +556,15 @@ public class SchemeChangeController {
         ArrayList<Schedule> schedules = new ArrayList<Schedule>();
           for(int i=1; i<rows; i++)
               for (int j=1; j<cols;j++) {
+                  if (labels[i][j].getSubjectId()!=-1)
               schedules.add(new Schedule(labels[i][j].getSubjectId(),j-1,
                       0, labels[i][j].getTeacherId(), numberSchemaId, i));
-              }
-
+                   }
+              System.out.println(schedules);
 //        Response<List<Schedule>> schedule = service.getschedule().execute();
 
-        service.deleteSchedule(numberSchemaId);
+
+        service.deleteSchedule(numberSchemaId).execute();
         for (Schedule s:schedules) {
             service.addschedule(s).execute();
         }

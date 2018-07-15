@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="260.0" prefWidth="526.0" style="-fx-background-color: #fFffff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ChangeWorkloadController">
+   <children>
+      <Pane layoutX="-6.0" layoutY="-5.0" prefHeight="65.0" prefWidth="307.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="158.0" layoutY="15.0" text="Изменить нагрузку">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+
+      <Label layoutX="30.0" layoutY="152.0" text="Преподаватель">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="save" layoutX="225.0" layoutY="205.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: #008ae6;" text="Готово" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="109.0" text="Предмет">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="subject" layoutX="185.0" layoutY="107.0" prefHeight="31.0" prefWidth="311.0" />
+      <ChoiceBox fx:id="teacher" layoutX="185.0" layoutY="150.0" prefHeight="31.0" prefWidth="311.0" />
+
+
+      
+   </children>
+</AnchorPane>

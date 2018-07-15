@@ -10,7 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
@@ -47,14 +47,12 @@ public class UsersController implements ListEditor{
     private TableColumn<UserView, String> columnlogin;
 
     @FXML
-    private Label name;
-
-
-
+    private Button save;
 
     @Override
     public void saveButtonClicked(ActionEvent actionEvent) {
-
+        Stage stag = (Stage) save.getScene().getWindow();
+        stag.close();
     }
 
 
@@ -107,7 +105,7 @@ public class UsersController implements ListEditor{
         UserView user = usersTable.getSelectionModel().getSelectedItem();
         service.deleteUser(user.getId()).execute();
         data.remove(usersTable.getSelectionModel().getSelectedIndex());
-        usersTable.refresh();
+        //usersTable.refresh();
     }
 
     @Override
@@ -120,7 +118,7 @@ public class UsersController implements ListEditor{
         stage.setTitle("Добавить пользователя");
         stage.setScene(new Scene(root_add, 456, 439));
         stage.show();
-        usersTable.refresh();
+        //usersTable.refresh();
 
     }
 
@@ -134,8 +132,7 @@ public class UsersController implements ListEditor{
         stage_add.setTitle("Изменить пользователя");
         stage_add.setScene(new Scene(root_add, 456, 439));
         stage_add.show();
-
-        usersTable.refresh();
+        //usersTable.refresh();
     }
 
 

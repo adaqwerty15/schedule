@@ -44,4 +44,7 @@ public interface WorkloadService {
 
     @POST("schedule")
     Call<Schedule> addschedule(@Body Schedule schedule);
+
+    @GET("cabinets")
+    Call<List<Cabinet>> getCabinet();
 }
