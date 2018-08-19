@@ -54,6 +54,7 @@ public class CreateSheduleController {
 
 
     public void initialize () throws IOException {
+        data.clear();
         a= new ArrayList<String>(Arrays.asList("Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"));
         Gson gson = new GsonBuilder()
                 .setDateFormat("MMM dd, yyyy")

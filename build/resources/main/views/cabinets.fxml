@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="692.0" prefWidth="1031.0" style="-fx-background-color: #fFffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ClassroomController">
+<AnchorPane prefHeight="692.0" prefWidth="1031.0" style="-fx-background-color: #fFffff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ClassroomController">
     <children>
       <Pane layoutX="-7.0" prefHeight="80.0" prefWidth="1040.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -17,14 +17,10 @@
                       <Font size="24.0" />
                   </font>
               </Label>
-              <Button fx:id="save" layoutX="848.0" layoutY="23.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="35.0" prefWidth="136.0" style="-fx-background-color: #008ae6;" text="Готово" textFill="WHITE">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
+
          </children>
       </Pane>
-        <TableView fx:id="tableClassroom" editable="true" layoutX="277.0" layoutY="135.0" onMouseClicked="#tableClicked" prefHeight="472.0" prefWidth="444.0" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="135.0">
+        <TableView fx:id="tableClassroom" editable="true" layoutX="277.0" layoutY="162.0" prefHeight="445.0" prefWidth="444.0" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="162.0">
             <columns>
                 <TableColumn fx:id="columnId" prefWidth="63.0" text="№" />
             <TableColumn fx:id="columnName" prefWidth="379.0" text="Название кабинета" />
@@ -33,7 +29,13 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
         </TableView>
-      <Button layoutX="865.0" layoutY="135.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="35.0" prefWidth="72.0" text="Удалить" AnchorPane.rightAnchor="50.0" />
-      <Button layoutX="775.0" layoutY="135.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="35.0" prefWidth="72.0" text="Добавть" AnchorPane.rightAnchor="150.0" />
+      <Button fx:id="delete" layoutX="880.0" layoutY="100.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="35.0" prefWidth="99.0" text="Удалить" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="100.0" />
+      <Button fx:id="add" layoutX="634.0" layoutY="100.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="35.0" prefWidth="116.0" text="Добавить" AnchorPane.rightAnchor="281.0" AnchorPane.topAnchor="100.0" />
+        <Button fx:id="save" layoutX="848.0" layoutY="23.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="35.0" prefWidth="136.0" style="-fx-background-color: #008ae6;" text="Готово" textFill="WHITE" AnchorPane.rightAnchor="47.0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+      <Button fx:id="change" onAction="#changeButtonClicked" layoutX="765.0" layoutY="100.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="99.0" text="Изменить" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="100.0" />
     </children>
 </AnchorPane>

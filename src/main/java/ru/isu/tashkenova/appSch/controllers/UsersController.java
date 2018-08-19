@@ -80,6 +80,8 @@ public class UsersController implements ListEditor{
         Response<List<User>> users = service.getUsers().execute();
 
 
+        data.clear();
+
         for (User w: users.body()) {
             User user = gson.fromJson(gson.toJson(w), User.class);
 
@@ -87,6 +89,7 @@ public class UsersController implements ListEditor{
                     user.getFathername(), user.getLogin(), user.getRoleId(), content.get(user.getRoleId()).name, user.getId(), user.getPassword()));
 
         }
+
 
         usersTable.setItems(data);
 

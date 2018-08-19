@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleRole="TEXT" prefHeight="791.0" prefWidth="1018.0" style="-fx-background-color: #FCFDFD;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ClassesController">
+<AnchorPane fx:id="apane" accessibleRole="TEXT" prefHeight="791.0" prefWidth="1018.0" style="-fx-background-color: #FCFDFD;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.ClassesController">
    <children>
       <Pane layoutX="-4.0" prefHeight="93.0" prefWidth="1031.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Label layoutX="31.0" layoutY="27.0" prefHeight="45.0" prefWidth="138.0" text="Классы">
@@ -24,7 +24,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Label fx:id="i5" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="190.0" maxHeight="31.0" maxWidth="27.0" minHeight="31.0" minWidth="27.0" onMouseClicked="#labelClassesClicked" onMouseEntered="#labelClassEntered" onMouseExited="#labelClassExited" prefHeight="31.0" prefWidth="27.0" text="5и" textFill="#228cc9" textOverrun="CLIP">
+      <!--<Label fx:id="i5" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="190.0" maxHeight="31.0" maxWidth="27.0" minHeight="31.0" minWidth="27.0" onMouseClicked="#labelClassesClicked" onMouseEntered="#labelClassEntered" onMouseExited="#labelClassExited" prefHeight="31.0" prefWidth="27.0" text="5и" textFill="#228cc9" textOverrun="CLIP">
          <font>
             <Font size="21.0" />
          </font>
@@ -32,11 +32,11 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label fx:id="im" contentDisplay="CENTER" layoutX="126.0" layoutY="240.0" maxHeight="31.0" maxWidth="57.0" onMouseClicked="#labelClassesClicked" onMouseEntered="#labelClassEntered" onMouseExited="#labelClassExited" prefHeight="31.0" prefWidth="27.0" text="5м" textFill="#228cc9">
+      <Label fx:id="m5" contentDisplay="CENTER" layoutX="125.0" layoutY="240.0" maxHeight="31.0" maxWidth="57.0" onMouseClicked="#labelClassesClicked" onMouseEntered="#labelClassEntered" onMouseExited="#labelClassExited" prefHeight="31.0" prefWidth="27.0" text="5м" textFill="#228cc9">
          <font>
             <Font size="21.0" />
          </font>
-      </Label>
+      </Label>-->
 
 
       <Label alignment="CENTER" layoutX="250.0" layoutY="135.0" text="6">
@@ -44,7 +44,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Label fx:id="l6" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="190.0" onMouseClicked="#labelClassesClicked" onMouseEntered="#labelClassEntered" onMouseExited="#labelClassExited" prefHeight="31.0" prefWidth="27.0" text="6л" textFill="#228cc9">
+      <!--<Label fx:id="l6" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="190.0" onMouseClicked="#labelClassesClicked" onMouseEntered="#labelClassEntered" onMouseExited="#labelClassExited" prefHeight="31.0" prefWidth="27.0" text="6л" textFill="#228cc9">
          <font>
             <Font size="21.0" />
          </font>
@@ -53,7 +53,7 @@
          <font>
             <Font size="21.0" />
          </font>
-      </Label>
+      </Label>-->
       <Label alignment="CENTER" layoutX="375.0" layoutY="135.0" text="7">
          <font>
             <Font size="25.0" />

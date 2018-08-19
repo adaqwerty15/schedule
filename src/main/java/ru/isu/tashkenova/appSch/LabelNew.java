@@ -10,6 +10,7 @@ public class LabelNew extends Label {
     private int teacherId;
     private boolean isValid;
     private int subjectId;
+    private int cabinetLength;
 
 
     public LabelNew() {
@@ -86,13 +87,28 @@ public class LabelNew extends Label {
         this.isValid = true;
     }
 
+    public void addCabinet(String cabinet) {
+        if (cabinetId!=-1) {
+            this.clearCabinet();
+        }
+        this.setText(this.getText()+"\n"+cabinet);
+    }
+
+    public void clearCabinet() {
+        if (cabinetId!=-1) {
+            this.setText(this.getText().substring(0, this.getText().length()-this.cabinetLength-1));
+        }
+        this.cabinetLength = 0;
+        this.cabinetId = -1;
+    }
 
     public int getCabinetId() {
         return cabinetId;
     }
 
-    public void setCabinetId(int cabinetId) {
+    public void setCabinetId(int cabinetId, int cabinetLength) {
         this.cabinetId = cabinetId;
+        this.cabinetLength = cabinetLength;
     }
 
     public int getTeacherId() {

@@ -95,7 +95,7 @@ public class AdmindashboardController {
     void usersClick(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/users.fxml"));
-        stage.setTitle("Classes");
+        stage.setTitle("Пользователи");
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double width = screenSize.width;
         double height = screenSize.getHeight();

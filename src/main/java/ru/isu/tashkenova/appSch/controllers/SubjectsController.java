@@ -82,6 +82,7 @@ public class SubjectsController  implements ListEditor{
         }
         tableSubject.setItems(data);
 
+
     }
 
 

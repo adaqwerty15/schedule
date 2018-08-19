@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import ru.isu.tashkenova.appSch.GridPaneNew?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.SchemeChangeController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.SchemeChangeController">
     <children>
-        <Pane prefHeight="84.0" prefWidth="1130.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <Pane prefHeight="84.0" prefWidth="1130.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+
+         </children></Pane>
         <Text layoutX="41.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Расписание" textAlignment="CENTER" wrappingWidth="168.13671875">
             <font>
                 <Font size="21.0" />
@@ -31,8 +40,8 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <Label fx:id="img" layoutX="816.0" layoutY="10.0" prefHeight="69.0" prefWidth="64.0" styleClass="img" stylesheets="@grid.css" AnchorPane.rightAnchor="250.0" />
       <ChoiceBox fx:id="classchoice" layoutX="862.0" layoutY="112.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.rightAnchor="18.0" />
-
+        <Label fx:id="excel" layoutX="823.0"  onMouseClicked="#saveExcel" prefHeight="84.0" prefWidth="84.0" styleClass="img" stylesheets="@excel.css" AnchorPane.rightAnchor="223.0" />
+        <Label fx:id="img" layoutX="735.0" layoutY="7.0" prefHeight="69.0" prefWidth="64.0" styleClass="img" stylesheets="@grid.css" AnchorPane.rightAnchor="320.0" />
     </children>
 </AnchorPane>
