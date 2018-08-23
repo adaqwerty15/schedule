@@ -204,13 +204,13 @@ public class Scheme {
         columnConstraints.setPrefWidth(100);
         columnConstraints.setHalignment(HPos.CENTER);
 
-        labels[0][0] = new LabelNew("");
+        labels[0][0] = new LabelNew("lll");
         labels[0][0].setPrefWidth(gridpane.getPrefWidth());
         labels[0][0].setId("right");
         labels[0][0].setPrefHeight((gridpane.getPrefHeight()));
         labels[0][0].setStyle("#ffffff;-fx-border-width: 0.5; -fx-border-color: #000000");
         gridpane.add(labels[0][0], 0, 0);
-        gridpane.add(new LabelNew("kkk"), 0, 0);
+        //gridpane.add(new LabelNew("kkk"), 0, 0);
         gridpane.setColumnSpan(labels[0][0], 2);
         labels[0][0].setOnMouseMoved((EventHandler) event -> gridpane.selectRange(0, 0));
 
@@ -448,7 +448,12 @@ public class Scheme {
                     }
                 });
             }
+
+        //gridpane.setColumnSpan(labels[rows -3][cols  - 3], 2);
+        labels[rows -3][cols  - 3].setText("ddrfrfrrfrfrfrfrfrf");
     }
+
+
 
     public void checkAll() {
         for (int j = 1; j < rows; j++) {
@@ -547,7 +552,7 @@ public class Scheme {
             }
         }
 
-        FileOutputStream fileOut = new FileOutputStream("workbook.xls");
+        FileOutputStream fileOut =  new FileOutputStream("D:\\Schedule\\workbook.xls");
         workbook.write(fileOut);
         fileOut.close();
 

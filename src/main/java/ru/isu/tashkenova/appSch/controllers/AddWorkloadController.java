@@ -32,7 +32,7 @@ public class AddWorkloadController {
         ArrayList<String> teachers= new ArrayList<>();
         for ( User t: contentTeachers) {
             if (t.getRoleId() <2) {
-                teachers.add(t.getSurname()+" "+t.getName().substring(0,1)+"."+t.getFathername().substring(0,1));
+                teachers.add(t.getSurname()+" "+t.getName().substring(0,1)+"."+t.getFathername().substring(0,1)+".");
                 //contentTeachers.remove(t);
             }
 

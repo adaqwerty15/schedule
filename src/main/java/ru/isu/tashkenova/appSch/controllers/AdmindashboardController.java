@@ -95,7 +95,7 @@ public class AdmindashboardController {
     void usersClick(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/users.fxml"));
-        stage.setTitle("Пользователи");
+        stage.setTitle("Users");
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double width = screenSize.width;
         double height = screenSize.getHeight();
@@ -107,7 +107,7 @@ public class AdmindashboardController {
     void createSheduleClick(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/createShedule.fxml"));
-        stage.setTitle("Create shedule");
+        stage.setTitle("Create schedule");
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double width = screenSize.width;
         double height = screenSize.getHeight();
