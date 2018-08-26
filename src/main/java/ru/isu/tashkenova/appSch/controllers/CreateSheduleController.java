@@ -16,7 +16,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import retrofit2.Response;
 import ru.isu.tashkenova.appSch.*;
@@ -28,6 +31,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CreateSheduleController {
+    @FXML
+    private AnchorPane anchorPane;
+
     @FXML
     private ComboBox<String> day;
 
@@ -75,6 +81,19 @@ public class CreateSheduleController {
         }
 
         scheme.setItems(data);
+
+        anchorPane.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+            public void handle(KeyEvent ke) {
+                if (ke.getCode().equals(KeyCode.ENTER)) {
+                    try {
+                        changeSchemeClick(new ActionEvent());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        });
 
 
 

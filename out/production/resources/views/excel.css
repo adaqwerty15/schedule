@@ -2,3 +2,8 @@
 -fx-background-image:url(ms.png);
 -fx-background-repeat: no-repeat;
 }
+
+.img2{
+-fx-background-image:url(ms2.png);
+-fx-background-repeat: no-repeat;
+}

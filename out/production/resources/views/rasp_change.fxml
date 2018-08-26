@@ -11,11 +11,10 @@
 <?import javafx.scene.text.Text?>
 <?import ru.isu.tashkenova.appSch.GridPaneNew?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.SchemeChangeController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.SchemeChangeController">
     <children>
-        <Pane prefHeight="84.0" prefWidth="1130.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Pane  fx:id="pane" onMouseClicked="#paneClicked" prefHeight="84.0" prefWidth="1130.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-
          </children></Pane>
         <Text layoutX="41.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Расписание" textAlignment="CENTER" wrappingWidth="168.13671875">
             <font>
@@ -23,15 +22,15 @@
             </font>
         </Text>
 
-        <ScrollPane layoutX="862.0" layoutY="152.0" prefHeight="606.0" prefWidth="250.0" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="152.0">
+        <ScrollPane fx:id="scrollPane" onMouseClicked="#paneClicked" layoutX="862.0" layoutY="152.0" prefHeight="606.0" prefWidth="250.0" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="152.0">
             <content>
-                <GridPane fx:id="gp" prefHeight="644.0" prefWidth="798.0" styleClass="gr">
+                <GridPane fx:id="gp" prefHeight="644.0" prefWidth="250.0" styleClass="gr">
                 </GridPane>
             </content>
         </ScrollPane>
-      <ScrollPane layoutX="37.0" layoutY="112.0" prefHeight="646.0" prefWidth="794.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="112.0">
+      <ScrollPane fx:id="scrollPane2"  layoutX="37.0" layoutY="112.0" prefHeight="646.0" prefWidth="794.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="112.0">
          <content>
-            <GridPaneNew fx:id="gridpane" prefHeight="644.0" prefWidth="798.0" styleClass="gridpane" stylesheets="@grid.css">
+            <GridPaneNew fx:id="gridpane" prefHeight="644.0" prefWidth="898.0" styleClass="gridpane" stylesheets="@grid.css">
             </GridPaneNew>
          </content>
       </ScrollPane>
@@ -41,7 +40,10 @@
          </font>
       </Button>
       <ChoiceBox fx:id="classchoice" layoutX="862.0" layoutY="112.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.rightAnchor="18.0" />
-        <Label fx:id="excel" layoutX="823.0"  onMouseClicked="#saveExcel" prefHeight="84.0" prefWidth="84.0" styleClass="img" stylesheets="@excel.css" AnchorPane.rightAnchor="223.0" />
+        <Label fx:id="excel" layoutX="823.0" onMouseClicked="#saveExcel" prefHeight="84.0" prefWidth="84.0" styleClass="img" stylesheets="@excel.css" AnchorPane.rightAnchor="223.0" />
+        <Label fx:id="eraser" layoutX="667.0" layoutY="8.0" onMouseClicked="#eraserClicked" prefHeight="64.0" prefWidth="64.0" styleClass="img" stylesheets="@eraser.css" AnchorPane.rightAnchor="399.0" />
+        <Label fx:id="pencil" layoutX="584.0" layoutY="8.0" onMouseClicked="#pencilClicked" prefHeight="64.0" prefWidth="64.0" styleClass="img" stylesheets="@pencil.css" AnchorPane.rightAnchor="482.0" />
         <Label fx:id="img" layoutX="735.0" layoutY="7.0" prefHeight="69.0" prefWidth="64.0" styleClass="img" stylesheets="@grid.css" AnchorPane.rightAnchor="320.0" />
+        <Label fx:id="message" layoutX="301.0" layoutY="31.0" AnchorPane.topAnchor="27.0"  AnchorPane.leftAnchor="301.0" />
     </children>
 </AnchorPane>

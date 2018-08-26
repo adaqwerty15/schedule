@@ -1,6 +1,8 @@
 package ru.isu.tashkenova.appSch.controllers;
 
 import javafx.collections.FXCollections;
+import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.text.Font;
 import retrofit2.Response;
 import ru.isu.tashkenova.appSch.CreateScheduleView;
@@ -24,24 +26,36 @@ public class SchemeChangeController extends Scheme{
                 schedule.body()
         );
 
+
+
         for (Schedule s : contentSch) {
             if (s.subjectId != -1) {
-                labels[s.numberOfTheLesson][s.getStudentClassId() + 1].setFont(new Font("Arial", 11));
-                labels[s.numberOfTheLesson][s.getStudentClassId() + 1].setText(new WorkloadView(subjects.get(s.subjectId), users.get(s.teacherId)).toString());
-                labels[s.numberOfTheLesson][s.getStudentClassId() + 1].setSubjectId(s.subjectId);
-                labels[s.numberOfTheLesson][s.getStudentClassId() + 1].setTeacherId(s.teacherId);
+                 final int numb = s.numberOfTheLesson;
+                 final int class_index = s.getStudentClassId()+2;
+                labels[numb][class_index].setFont(new Font("Arial", 11));
+                labels[numb][class_index].setText(new WorkloadView(subjects.get(s.subjectId), users.get(s.teacherId)).toString());
+                labels[numb][class_index].setSubjectId(s.subjectId);
+                labels[numb][class_index].setTeacherId(s.teacherId);
                 if (s.cabinetId == -1)
-                    labels[s.numberOfTheLesson][s.getStudentClassId() + 1].setCabinetId(s.cabinetId, 0);
+                    labels[numb][class_index].setCabinetId(s.cabinetId, 0);
                 else {
-                    labels[s.numberOfTheLesson][s.getStudentClassId() + 1].setText(labels[s.numberOfTheLesson][s.getStudentClassId() + 1].getText() + "\n" + cabinets.get(s.cabinetId).getName());
-                    labels[s.numberOfTheLesson][s.getStudentClassId() + 1].setCabinetId(s.cabinetId, cabinets.get(s.cabinetId).getName().length());
+                    labels[numb][class_index].setText(labels[numb][class_index].getText() + "\n" + cabinets.get(s.cabinetId).getName());
+                    labels[numb][class_index].setCabinetId(s.cabinetId, cabinets.get(s.cabinetId).getName().length());
+                }
+                if (numb % 2 == 0) {
+                    gridpane.setRowSpan(labels[numb-1][class_index], 1);
+                    labels[numb][class_index].setMinHeight(55);
+                    labels[numb][class_index].setPrefHeight(gridpane.getPrefHeight());
+                    labels[numb][class_index].setPrefWidth(gridpane.getPrefWidth());
+                    labels[numb][class_index].setId("right");
+                    labels[numb][class_index].setAlignment(Pos.CENTER);
+                    labels[numb][class_index].setOnMouseMoved((EventHandler) event2 -> gridpane.selectRange(class_index, numb));
                 }
             }
         }
 
         checkAll();
     }
-
 
 
 

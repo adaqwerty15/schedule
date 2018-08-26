@@ -9,14 +9,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import retrofit2.Response;
 import ru.isu.tashkenova.appSch.*;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -171,5 +173,54 @@ public class ClassEditorController {
     }
 
     public void deleteButtonClicked(ActionEvent actionEvent) {
+    }
+
+
+    public void saveExcel(MouseEvent mouseEvent) throws IOException {
+        Workbook workbook = new HSSFWorkbook();
+        Sheet spreadsheet = workbook.createSheet(code);
+
+        org.apache.poi.ss.usermodel.Row row = spreadsheet.createRow(0);;
+        //spreadsheet.setDefaultRowHeight((short)600);
+        spreadsheet.setDefaultColumnWidth(40);
+
+
+//        CellStyle style = workbook.createCellStyle();
+//        style.setWrapText(true);
+//        style.setBorderBottom(CellStyle.BORDER_THIN);
+//        style.setBorderTop(CellStyle.BORDER_THIN);
+//        style.setBorderLeft(CellStyle.BORDER_THIN);
+//        style.setBorderRight(CellStyle.BORDER_THIN);
+//
+//        org.apache.poi.ss.usermodel.Font font = workbook.createFont();
+//        font.setFontHeightInPoints((short)11);
+//        font.setFontName("Tahoma");
+//        style.setFont(font);
+
+        for (int j = 0; j < tableClasses.getColumns().size(); j++) {
+            row.createCell(j).setCellValue(tableClasses.getColumns().get(j).getText());
+        }
+
+        for (int i = 0; i < tableClasses.getItems().size(); i++) {
+            row = spreadsheet.createRow(i + 1);
+            for (int j = 0; j < tableClasses.getColumns().size(); j++) {
+                if(tableClasses.getColumns().get(j).getCellData(i) != null) {
+                    row.createCell(j).setCellValue(tableClasses.getColumns().get(j).getCellData(i).toString());
+                }
+                else {
+                    row.createCell(j).setCellValue("");
+                }
+            }
+        }
+
+        FileOutputStream fileOut =  new FileOutputStream("D:\\Schedule\\nagruzka"+code+".xls");
+        workbook.write(fileOut);
+        fileOut.close();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Файл сохранен в D:\\Schedule");
+        alert.setHeaderText(null);
+        alert.setTitle("Information");
+        alert.showAndWait();
     }
 }

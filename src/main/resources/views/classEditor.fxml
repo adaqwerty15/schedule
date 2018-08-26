@@ -78,6 +78,7 @@
                               <Font size="13.0" />
                            </font>
                         </Button>
+                         <Label fx:id="excel" layoutX="519.0" layoutY="9.0" onMouseClicked="#saveExcel" prefHeight="42.0" prefWidth="49.0" styleClass="img2" stylesheets="@excel.css" AnchorPane.rightAnchor="469.0" AnchorPane.topAnchor="9.0" />
                      </children></AnchorPane>
             </content>
           </Tab>

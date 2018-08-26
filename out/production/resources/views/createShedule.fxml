@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="791.0" prefWidth="1031.0" style="-fx-background-color: #FCFDFD;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.CreateSheduleController">
+<AnchorPane fx:id="anchorPane" prefHeight="791.0" prefWidth="1031.0" style="-fx-background-color: #FCFDFD;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.isu.tashkenova.appSch.controllers.CreateSheduleController">
    <children>
       <Pane prefHeight="93.0" prefWidth="1031.0" style="-fx-background-color: #FAAC58;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Button fx:id="createScheme" layoutX="1000.0" layoutY="20.0" mnemonicParsing="false" onAction="#createSchemeClick" prefHeight="48.0" prefWidth="147.0" style="-fx-background-color: #008ae6;" text="Создать схему" textFill="WHITE" AnchorPane.rightAnchor="30.0">

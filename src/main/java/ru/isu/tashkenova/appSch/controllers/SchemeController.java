@@ -1,10 +1,7 @@
 package ru.isu.tashkenova.appSch.controllers;
 
-import javafx.event.ActionEvent;
-import javafx.scene.control.Alert;
 import ru.isu.tashkenova.appSch.CreateScheduleView;
 import ru.isu.tashkenova.appSch.RetrofitService;
-import ru.isu.tashkenova.appSch.Schedule;
 import ru.isu.tashkenova.appSch.ScheduleOwner;
 
 import java.io.IOException;
@@ -15,6 +12,7 @@ import java.util.Date;
 
 
 public class SchemeController extends Scheme{
+
 
     private int dayId;
     public String nameSchema;
@@ -37,22 +35,25 @@ public class SchemeController extends Scheme{
 
 
 
-    public void saveClick(ActionEvent actionEvent) throws IOException {
-        ArrayList<Schedule> schedules = new ArrayList<Schedule>();
-          for(int i=1; i<rows; i++)
-              for (int j=1; j<cols;j++) {
-              if (labels[i][j].getSubjectId()!=-1)
-              schedules.add(new Schedule(labels[i][j].getSubjectId(),j-1,
-                      labels[i][j].getCabinetId(), labels[i][j].getTeacherId(), numberSchemaId, i));
-              }
+//    public void saveClick(ActionEvent actionEvent) throws IOException {
+//        ArrayList<Schedule> schedules = new ArrayList<Schedule>();
+//          for(int i=1; i<rows*2-1; i++)
+//              for (int j=2; j<cols;j++) {
+//              if (labels[i][j].getSubjectId()!=-1)
+//              schedules.add(new Schedule(labels[i][j].getSubjectId(),j-2,
+//                      labels[i][j].getCabinetId(), labels[i][j].getTeacherId(), numberSchemaId, i));
+//              }
+//
+//        for (Schedule s:schedules) {
+//            service.addschedule(s).execute();
+//        }
+//        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+//        alert.setContentText("Изменения сохранены");
+//        alert.setHeaderText(null);
+//        alert.setTitle("Information");
+//        alert.showAndWait();
+//    }
 
-        for (Schedule s:schedules) {
-            service.addschedule(s).execute();
-        }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Изменения сохранены");
-        alert.setHeaderText(null);
-        alert.setTitle("Information");
-        alert.showAndWait();
-    }
+
+
 }
